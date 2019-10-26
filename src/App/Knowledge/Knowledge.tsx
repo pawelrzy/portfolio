@@ -4,6 +4,7 @@ import './Knowledge.css';
 
 const Knowledge: FC = () => {
     const languages = ['Typescript/Javascript', 'Python', 'Go', 'SQL', 'Bash', 'MATLAB', 'Swift', 'C#', 'C++'];
+    const technologies = ['React', 'Redux', 'Vue', 'Sass', 'REST', 'GraphQL', 'Apollo', 'Node', 'Express', 'Django', 'PostgreSQL', 'Firebase', '.NET Core', 'JEST', 'Webpack', 'Babel', 'Hyperledger Fabric', 'TensorFlow', 'scikit-learn', 'Docker', 'CircleCI', 'Jenkins'];
     return (
         <section className="container knowledge">
             <h1 className="title">Knowledge</h1>
@@ -24,9 +25,9 @@ const Knowledge: FC = () => {
                     <article className="tile is-child box">
                         <h3 className="title is-6">Technologies</h3>
                         <div className="tags are-medium">
-                            { languages.map(language => (
+                            { technologies.map(technology => (
                                 <span className="tag">
-                                    {language}
+                                    {technology}
                                 </span>
                             ))}
                         </div>
