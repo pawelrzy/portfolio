@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AnimatedLogo.css'
+import './AnimatedLogo.scss'
 
 import logo from '../../../logo.jpg';
 

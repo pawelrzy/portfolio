@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 
+import './ContactMe.scss';
+
 const ContactMe: FC = () => {
     return (
-        <section className="container">
+        <section className="container contact-me">
             <h1 className="title">Contact Me</h1>
             <form 
                 name="input"

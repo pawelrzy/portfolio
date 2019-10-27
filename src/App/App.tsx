@@ -1,21 +1,20 @@
 import React, { FC } from 'react';
-import './App.css';
+import './App.scss';
 
-import NavBar from './NavBar/NavBar';
-import IntroHero from './IntroHero/IntroHero';
+import Splash from './Splash/Splash';
 import Knowledge from './Knowledge/Knowledge';
 // import Experiences from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
+import Footer from './Footer/Footer';
 
 const App: FC = () => {
     return (
         <div className="App">
-            <NavBar />
-            <IntroHero />
+            <Splash />
             <Knowledge />
             {/* <Experiences /> */}
             <ContactMe /> 
-            {/* <Footer /> */}
+            <Footer />
            
 
         </div>

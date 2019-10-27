@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import AnimatedLogo from './AnimatedLogo/AnimatedLogo';
 import NavItems from './NavItems/NavItems';
 
-import './NavBar.css';
+import './NavBar.scss';
 
 const NavBar: FC = () => {
 
