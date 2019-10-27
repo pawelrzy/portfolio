@@ -3,17 +3,22 @@ $light-purple: #FFBEED;
 $dark-purple: #2D1457;
 $light-background: #f0f0f0;
 $dark-background: #222222;
+$light-highlight: $dark-purple;
+$dark-highlight: #1a1a1a;
 
 // // light mode
 // $text-strong: $dark-purple;
 // $primary: $dark-purple;
 // $link: $dark-purple;
 // $scheme-main: $light-background;
+// $scheme-main-bis: $light-highlight;
+// $body-color: $dark-purple;
 
 // dark mode
+$dark: $dark-highlight;
 $scheme-main: $dark-background;
-$scheme-main-bis: #1a1a1a;
-$box-background-color: #1a1a1a;
+$scheme-main-bis: $dark-highlight;
+$box-background-color: $dark-highlight;
 $text-strong: $light-purple;
 $primary: $light-purple;
 $background: $dark-background;
