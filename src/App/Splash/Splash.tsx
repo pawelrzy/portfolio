@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import NavBar from '../NavBar/NavBar';
 
+import ResumePath from '../../assets/resume.pdf';
+
 import './Splash.scss'
 
 //TODO Animate Arrow and make clickable
@@ -20,9 +22,9 @@ const Splash: FC = () => {
                         I'm an engineering student at the University of Waterloo with a passion for quality software.
                     </h1>
                     <div className="buttons">
-                        <div className="button">
+                        <a href={ResumePath} target="_blank" className="button">
                             View Resume
-                        </div>
+                        </a>
                         <div className="button is-primary">
                             Contact Me
                         </div>

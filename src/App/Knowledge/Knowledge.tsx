@@ -3,29 +3,35 @@ import React, { FC } from 'react';
 import './Knowledge.scss';
 
 const Knowledge: FC = () => {
-    const languages = ['Typescript/Javascript', 'Python', 'SQL', 'Bash', 'Swift', 'C++'];
-    const technologies = ['React', 'Redux', 'Vue', 'Sass', 'REST', 'GraphQL', 'Apollo', 'Node', 'Express', 'Django', 'PostgreSQL', 'Firebase', 'JEST', 'Webpack', 'Babel', 'Docker'];
+    const fs = {
+        languages: ['Typescript', 'Javascript', 'Python', 'SQL', 'Bash'],
+        technologies: ['React', 'Redux', 'Vue', 'Vuex', 'Apollo GraphQL', 'Node.js', 'Express.js', 'PostgreSQL', 'Firebase', 'JEST', 'Docker'],
+    }
+    const ml = {
+        languages: ['Python', 'Go', 'Scala'],
+        technologies: ['TensorFlow', 'scikit-learn', 'numpy', 'Hadoop', 'Apache Spark']
+    }
     return (
         <section className="container knowledge">
             <h1 className="title">Interests</h1>
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <h3 className="title is-6">Front-End Development</h3>
+                        <div className="discipline-icon">
+                            <i className="fas fa-database"></i>
+                        </div>
+                        <h3 className="title is-4 discipline-title">Full Stack Development</h3>
+                        <h3 className="title is-5">Languages</h3>
                         <div className="tags are-medium">
-                            { languages.map(language => (
+                            { fs.languages.map(language => (
                                 <span className="tag">
                                     {language}
                                 </span>
                             ))}
                         </div>
-                    </article>
-                </div>
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <h3 className="title is-6">Back-End Development</h3>
+                        <h3 className="title is-5">Technologies</h3>
                         <div className="tags are-medium">
-                            { technologies.map(technology => (
+                            { fs.technologies.map(technology => (
                                 <span className="tag">
                                     {technology}
                                 </span>
@@ -35,9 +41,21 @@ const Knowledge: FC = () => {
                 </div>
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <h3 className="title is-6">Machine Learning</h3>
+                        <div className="discipline-icon">
+                            <i className="fas fa-robot"></i>
+                        </div>
+                        <h3 className="title is-4 discipline-title">Machine Learning</h3>
+                        <h3 className="title is-5">Languages</h3>
                         <div className="tags are-medium">
-                            { technologies.map(technology => (
+                            { ml.languages.map(language => (
+                                <span className="tag">
+                                    {language}
+                                </span>
+                            ))}
+                        </div>
+                        <h3 className="title is-5">Technologies</h3>
+                        <div className="tags are-medium">
+                            { ml.technologies.map(technology => (
                                 <span className="tag">
                                     {technology}
                                 </span>
