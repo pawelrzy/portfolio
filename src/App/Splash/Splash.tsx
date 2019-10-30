@@ -22,7 +22,7 @@ const Splash: FC = () => {
                         I'm an engineering student at the University of Waterloo with a passion for quality software.
                     </h1>
                     <div className="buttons">
-                        <a href={ResumePath} target="_blank" className="button">
+                        <a href={ResumePath} target="_blank" rel="noopener noreferrer" className="button">
                             View Resume
                         </a>
                         <div className="button is-primary">
