@@ -26,7 +26,7 @@ const Splash: FC = () => {
                             View Resume
                         </a>
                         <div className="button is-primary">
-                            Contact Me
+                            Get in Touch&nbsp;<span role="img" aria-label="wave">👋🏽</span>
                         </div>
                     </div>
                 </div>

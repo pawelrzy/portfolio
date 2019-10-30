@@ -5,10 +5,10 @@ const NavItems: FC = () => {
     return (
         <div className="navbar-end nav-items">
             <a className="navbar-item" href="/#">
-                Knowledge
+                Expertise
             </a>
             <a className="navbar-item" href="/#">
-                Experiences
+                Past Experiences
             </a>
             <div className="navbar-item contact-button button is-primary">
                 Say Hello &nbsp;<span role="img" aria-label="wave">👋🏽</span>

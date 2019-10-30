@@ -11,7 +11,6 @@ const Footer: FC = () => {
                 </p>
             </div>
         </footer>
-
     );
 };
 
