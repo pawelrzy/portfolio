@@ -5,6 +5,9 @@ const NavItems: FC = () => {
     return (
         <div className="navbar-end nav-items">
             <a className="navbar-item" href="/#">
+                My Story
+            </a>
+            <a className="navbar-item" href="/#">
                 Expertise
             </a>
             <a className="navbar-item" href="/#">

@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const AboutMe: FC = () => {
     return (
         <section className="container knowledge">
-            <h1 className="title">About Me</h1>
+            <h1 className="title">My Story</h1>
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <article className="tile is-child box">
