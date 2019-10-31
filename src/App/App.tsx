@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Element } from 'react-scroll';
 import './App.scss';
 
 import Splash from './Splash/Splash';
@@ -12,10 +13,15 @@ const App: FC = () => {
     return (
         <div className="App">
             <Splash />
-            <AboutMe />
-            <Knowledge />
-            {/* <Experiences /> */}
-            <ContactMe /> 
+            <Element id='my-story' name='my-story'>
+                <AboutMe />
+            </Element>
+            <Element id='expertise' name='expertise'>
+                <Knowledge />
+            </Element>
+            <Element id='contact-me' name='contact-me'>
+                <ContactMe />
+            </Element>
             <Footer />
            
 
