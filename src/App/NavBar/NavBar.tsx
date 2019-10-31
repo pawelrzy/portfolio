@@ -10,7 +10,7 @@ const NavBar: FC = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="container">
-                <div className="navbar-brand">
+                <div className="navbar-brand logo-container">
                     <AnimatedLogo />
                 </div>
 

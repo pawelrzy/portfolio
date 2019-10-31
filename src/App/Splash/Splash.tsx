@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import NavBar from '../NavBar/NavBar';
 
 import ResumePath from '../../assets/resume.pdf';
 
@@ -9,7 +8,6 @@ import './Splash.scss'
 const Splash: FC = () => {
     return (
         <section className="hero splash">
-            <NavBar />
             <div className="hero-body body-container">
                 <div className="container text-container">
                     <h1 className="title is-massive">

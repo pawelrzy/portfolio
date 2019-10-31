@@ -14,6 +14,7 @@ const NavItems: FC = () => {
                 smooth={true} 
                 duration={500} 
                 className="navbar-item"
+                offset={-200}
                 // activeClass='some-active-class'
             >
                 My Story
@@ -22,7 +23,8 @@ const NavItems: FC = () => {
                 to="expertise" 
                 spy={true} 
                 smooth={true} 
-                duration={500} 
+                duration={500}
+                offset={-200} 
                 className="navbar-item"
             >
                 Expertise
@@ -31,7 +33,8 @@ const NavItems: FC = () => {
                 to="past-experience" 
                 spy={true} 
                 smooth={true} 
-                duration={500} 
+                duration={500}
+                offset={-200} 
                 className="navbar-item"
             >
                 Past Experiences
@@ -40,7 +43,8 @@ const NavItems: FC = () => {
                 to="contact-me" 
                 spy={true} 
                 smooth={true} 
-                duration={500} 
+                duration={500}
+                offset={-200} 
                 className="navbar-item contact-button button is-primary"
             >
                 Say Hello &nbsp;<span role="img" aria-label="wave">👋🏽</span>

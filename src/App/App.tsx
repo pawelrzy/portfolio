@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 import './App.scss';
 
+import NavBar from './NavBar/NavBar';
 import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
@@ -12,6 +13,7 @@ import Footer from './Footer/Footer';
 const App: FC = () => {
     return (
         <div className="App">
+            <NavBar/>
             <Splash />
             <Element id='my-story' name='my-story'>
                 <AboutMe />
@@ -22,9 +24,7 @@ const App: FC = () => {
             <Element id='contact-me' name='contact-me'>
                 <ContactMe />
             </Element>
-            <Footer />
-           
-
+            <Footer />    
         </div>
     );
 }
