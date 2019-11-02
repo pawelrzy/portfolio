@@ -1,8 +1,11 @@
 import React, { FC } from 'react';
+import Scroll from 'react-scroll';
 
 import ResumePath from '../../assets/resume.pdf';
 
 import './Splash.scss'
+
+const ScrollLink = Scroll.Link;
 
 //TODO Animate Arrow and make clickable
 const Splash: FC = () => {
@@ -23,15 +26,29 @@ const Splash: FC = () => {
                         <a href={ResumePath} target="_blank" rel="noopener noreferrer" className="button">
                             View Resume
                         </a>
-                        <div className="button is-primary">
+                        <ScrollLink 
+                            to="contact-me" 
+                            spy={true} 
+                            smooth={true} 
+                            duration={500}
+                            offset={-200} 
+                            className="button is-primary"
+                        >
                             Get in Touch&nbsp;<span role="img" aria-label="wave">👋🏽</span>
-                        </div>
+                        </ScrollLink>
                     </div>
                 </div>
             </div>
-            <div className="container icon">
+            <ScrollLink
+                to="my-story" 
+                spy={true} 
+                smooth={true} 
+                duration={500} 
+                className="container icon"
+                offset={-200}
+            >
                 <i className="fas fa-arrow-down"></i>
-            </div>
+            </ScrollLink>
         </section>
     );
 }
