@@ -13,6 +13,7 @@ const Splash: FC = () => {
         <section className="hero splash">
             <div className="hero-body body-container">
                 <div className="container text-container">
+                    <div className="selfie-container" />
                     <h1 className="title is-massive">
                         <span role="img" aria-label="wave">👋🏽</span>
                     </h1>
@@ -40,10 +41,10 @@ const Splash: FC = () => {
                 </div>
             </div>
             <ScrollLink
-                to="my-story" 
+                to="contact-me" 
                 spy={true} 
                 smooth={true} 
-                duration={500} 
+                duration={500}
                 className="container icon"
                 offset={-200}
             >

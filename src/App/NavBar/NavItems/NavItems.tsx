@@ -8,7 +8,7 @@ const ScrollLink = Scroll.Link;
 const NavItems: FC = () => {
     return (
         <div className="navbar-end nav-items">
-            <ScrollLink 
+            {/* <ScrollLink 
                 to="my-story" 
                 spy={true} 
                 smooth={true} 
@@ -38,7 +38,7 @@ const NavItems: FC = () => {
                 className="navbar-item"
             >
                 Past Experiences
-            </ScrollLink> 
+            </ScrollLink>  */}
             <ScrollLink 
                 to="contact-me" 
                 spy={true} 

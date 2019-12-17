@@ -9,7 +9,7 @@ const Knowledge: FC = () => {
     }
     const ml = {
         languages: ['Python', 'Go', 'Scala'],
-        technologies: ['TensorFlow', 'scikit-learn', 'numpy', 'Hadoop', 'Apache Spark']
+        technologies: ['TensorFlow', 'scikit-learn', 'numpy', 'pandas', 'Hadoop', 'Apache Spark']
     }
     return (
         <section className="container knowledge">

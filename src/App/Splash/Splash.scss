@@ -1,3 +1,5 @@
+// @import '../../styles.scss';
+
 .splash {
     height: 100vh;
 }
@@ -18,4 +20,17 @@
 .is-massive {
     font-size: 6rem;
     font-weight: 800;
+}
+
+.selfie-container {
+    // border: 1rem $light-purple;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../../assets/selfie.jpg');
+    background-size: 200%;
+    background-position: 60% 20%;
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
 }
