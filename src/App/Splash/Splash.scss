@@ -1,4 +1,4 @@
-// @import '../../styles.scss';
+@import '../../styles.scss';
 
 .splash {
     height: 100vh;
@@ -20,17 +20,34 @@
 .is-massive {
     font-size: 6rem;
     font-weight: 800;
+    text-align: center;
 }
 
+.subtitle {
+    text-align: center;
+}
+
+.buttons {
+    justify-content: center;
+}
+
+.social-links {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.social-icon {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
 .selfie-container {
-    // border: 1rem $light-purple;
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1rem $light-purple;
     background: url('../../assets/selfie.jpg');
     background-size: 200%;
     background-position: 60% 20%;
     border-radius: 50%;
-    width: 25rem;
-    height: 25rem;
+    width: 15rem;
+    height: 15rem;
 }

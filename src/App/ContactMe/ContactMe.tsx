@@ -5,7 +5,7 @@ import './ContactMe.scss';
 const ContactMe: FC = () => {
     return (
         <section className="container contact-me">
-            <h1 className="title">Reach Out</h1>
+            <h1 className="title">Say Hello!</h1>
             <form 
                 name="input"
                 className="field"
@@ -34,9 +34,9 @@ const ContactMe: FC = () => {
                     </div>
                 </div>
 
-                <div className="field is-grouped">
+                <div className="field is-grouped send-button">
                     <div className="control">
-                        <input className="button is-link" type="submit" value="Submit" />
+                        <input className="button is-link" type="submit" value="Send 📬" />
                     </div>
                 </div>
 

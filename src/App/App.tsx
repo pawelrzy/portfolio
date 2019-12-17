@@ -41,7 +41,7 @@ class App extends Component<{}, AppState> {
 
         return (
             <Fragment>
-                <NavBar/>
+                {/* <NavBar/> */}
                 <div className="body">
                     <Element id='splash' name='splash'>
                         <Splash />
@@ -59,7 +59,7 @@ class App extends Component<{}, AppState> {
                         <ContactMe />
                     </Element>
                     <Footer />
-                    { hasScrolled && <ScrollToTop /> }
+                    {/* { hasScrolled && <ScrollToTop /> } */}
                 </div>
             </Fragment>
         );
