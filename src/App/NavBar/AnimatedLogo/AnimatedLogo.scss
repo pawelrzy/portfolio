@@ -1,5 +1,9 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 .logo {
-    border-radius: 50%;
+    border-radius: 0.8rem;
     height: 5rem;
     width: 5rem;
 }

@@ -1,12 +1,13 @@
+@import '../../styles/breakpoints.scss';
+
 .knowledge {
-    margin: 10rem auto;
+    padding-top: 7rem !important;
+    @include desktop-up {
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
 }
 
-.discipline-title {
-    text-align: center;
-}
-
-.discipline-icon {
-    text-align: center;
-    font-size: 3rem;
+.tags {
+    margin-bottom: 0 !important;
 }

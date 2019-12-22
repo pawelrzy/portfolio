@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment, useState } from 'react';
+import { Link } from 'react-scroll';
 
 import AnimatedLogo from './AnimatedLogo/AnimatedLogo';
 import NavItems from './NavItems/NavItems';
@@ -6,15 +7,57 @@ import NavItems from './NavItems/NavItems';
 import './NavBar.scss';
 
 const NavBar: FC = () => {
+    const [menuToggled, setMenuToggled] = useState(false);
+    const isMobile = window.innerWidth < 1024;
+
+    const toggleNav = () => {
+        var nav = document.getElementById("michael");
+        if (!nav) return
+        var className = nav.getAttribute("class");
+        if (className === "navbar-menu") {
+            nav.className = "navbar-menu is-active";
+            setMenuToggled(true);
+        } else {
+            nav.className = "navbar-menu";
+            setMenuToggled(false);
+        }
+    }
 
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div className="container">
                 <div className="navbar-brand logo-container">
-                    <AnimatedLogo />
+                    <Link
+                        to="splash"
+                        smooth
+                    >
+                        <AnimatedLogo />
+                    </Link>
+                    { isMobile && // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                        <a
+                            role="button"
+                            className="navbar-burger burger"
+                            aria-label="menu"
+                            aria-expanded="false"
+                            onClick={toggleNav}
+                        >
+                            { !menuToggled ? (
+                                <Fragment>
+                                    <span aria-hidden="true"></span>
+                                    <span aria-hidden="true"></span>
+                                    <span aria-hidden="true"></span>
+                                </Fragment>
+                            ) : (
+                                <div className="exit-icon">
+                                    <i className="fas fa-times"></i>
+                                </div>
+                            )}
+                            
+                        </a>
+                    }
                 </div>
 
-                <div className="navbar-menu">
+                <div id="michael" className="navbar-menu" onClick={toggleNav}>
                     <NavItems />
                 </div>
             </div>

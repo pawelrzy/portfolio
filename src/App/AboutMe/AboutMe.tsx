@@ -1,17 +1,45 @@
 import React, { FC } from 'react';
+import './AboutMe.scss';
 
 const AboutMe: FC = () => {
     return (
-        <section className="container knowledge">
-            <h1 className="title">My Story</h1>
-            <div className="tile is-ancestor">
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                    </article>
-                </div>
+        <section className="container about-me columns">
+            <div className="column">
+                <h1 className="title is-3">About Me</h1>
+            </div>
+            <div className="column">
+                <article className="message">
+                    <div className="message-body about-me-content">
+                        <p>
+                            Hi, I'm Michael Vytlingam. I am a <b>Full Stack 
+                            Developer</b> and <b>Machine Learning</b> enthusiast from Toronto, CA. 
+                            I am in my second year as a mechanical engineering student
+                            at the University of Waterloo.
+                        </p>
+                        <br/>
+                        <p>
+                            In my personal time, I enjoy playing pickup with just about any sport 
+                            available, I love reaching new PRs at the gym, hitting insane shots 
+                            in pool, and practicing trick-shots in Rocket League.
+                        </p>
+                        <br/>
+                        <p>
+                            I'm particularly interested in machine learning as I want to bridge 
+                            the gap between the human brain and a computer. I believe there are 
+                            more important things for humans to be doing rather than say, 
+                            driving for hours, reading spam emails, or handling customer support 
+                            issues. Why not give these tasks to a machine?
+                        </p>
+                        <br/>
+                        <p>
+                            Below are my projects and experience. Let me know what you think!
+                        </p>
+                        <br/>
+                        <p>
+                            - Michael
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
     );

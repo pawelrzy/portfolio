@@ -3,67 +3,82 @@ import React, { FC } from 'react';
 import './Knowledge.scss';
 
 const Knowledge: FC = () => {
-    const fs = {
-        languages: ['Typescript', 'Javascript', 'Python', 'SQL', 'Bash'],
-        technologies: ['React', 'Redux', 'Vue', 'Vuex', 'Apollo GraphQL', 'Node.js', 'Express.js', 'PostgreSQL', 'Firebase', 'JEST', 'Docker'],
-    }
+    const languages = ['Python', 'TypeScript/JavaScript', 'C++', 'Go', 'SQL', 'Bash']
+    const frontend = {
+        design: ['Figma', 'Adobe Illustrator', 'Photoshop', 'After Effects'],
+        tools: ['React', 'Redux', 'Vue', 'Vuex', 'Sass', 'JEST', 'Enzyme', 'Webpack', 'Babel', 'Bulma', 'Semantic UI', 'Lottie'],
+    };
+    const backend = ['Node', 'Express', 'ElasticSearch', 'Django', 'MongoDB', 'Apollo GraphQL'];
+    const infrastructure = ['Docker', 'Firebase', 'PosgreSQL', 'MongoDB', 'MySQL', 'CircleCI', 'Jenkins'];
     const ml = {
-        languages: ['Python', 'Go', 'Scala'],
-        technologies: ['TensorFlow', 'scikit-learn', 'numpy', 'pandas', 'Hadoop', 'Apache Spark']
-    }
+        tools: ['TensorFlow', 'scikit-learn'],
+        interests: ['Object Detection', 'Pathfinding']
+    };
     return (
-        <section className="container knowledge">
-            <h1 className="title">Expertise</h1>
-            <div className="tile is-ancestor">
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <div className="discipline-icon">
-                            <i className="fas fa-database"></i>
-                        </div>
-                        <h3 className="title is-4 discipline-title">Full Stack Development</h3>
-                        <h3 className="title is-5">Languages</h3>
-                        <div className="tags are-medium">
-                            { fs.languages.map(language => (
-                                <span className="tag">
-                                    {language}
-                                </span>
-                            ))}
-                        </div>
-                        <h3 className="title is-5">Technologies</h3>
-                        <div className="tags are-medium">
-                            { fs.technologies.map(technology => (
-                                <span className="tag">
-                                    {technology}
-                                </span>
-                            ))}
-                        </div>
-                    </article>
-                </div>
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <div className="discipline-icon">
-                            <i className="fas fa-robot"></i>
-                        </div>
-                        <h3 className="title is-4 discipline-title">Machine Learning</h3>
-                        <h3 className="title is-5">Languages</h3>
-                        <div className="tags are-medium">
-                            { ml.languages.map(language => (
-                                <span className="tag">
-                                    {language}
-                                </span>
-                            ))}
-                        </div>
-                        <h3 className="title is-5">Technologies</h3>
-                        <div className="tags are-medium">
-                            { ml.technologies.map(technology => (
-                                <span className="tag">
-                                    {technology}
-                                </span>
-                            ))}
-                        </div>
-                    </article>
-                </div>
+        <section className="container knowledge columns">
+            <div className="column">
+                <h1 className="title is-3">Knowledge</h1>
             </div>
+            <article className="column">
+                <div>
+                    <h1 className="title is-5">Languages</h1>
+                    <div className="tags">
+                        { languages.map(item => (
+                            <span className="tag">{item}</span>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <h1 className="title is-5">Front End</h1>
+                    <div>
+                        <h1 className="title is-7">Design</h1>
+                        <div className="tags">
+                            { frontend.design.map(item => (
+                                <span className="tag">{item}</span>
+                            ))}
+                        </div>
+                        <h1 className="title is-7">Tools</h1>
+                        <div className="tags">
+                            { frontend.tools.map(item => (
+                                <span className="tag">{item}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 className="title is-5">Back End</h1>
+                    <div className="tags">
+                        { backend.map(item => (
+                            <span className="tag">{item}</span>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <h1 className="title is-5">Infrastructure</h1>
+                    <div className="tags">
+                        { infrastructure.map(item => (
+                            <span className="tag">{item}</span>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <h1 className="title is-5">Machine Learning</h1>
+                    <div>
+                        <h1 className="title is-7">Tools</h1>
+                        <div className="tags">
+                            { ml.tools.map(item => (
+                                <span className="tag">{item}</span>
+                            ))}
+                        </div>
+                        <h1 className="title is-7">Specific Interests</h1>
+                        <div className="tags">
+                            { ml.interests.map(item => (
+                                <span className="tag">{item}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     );
 };

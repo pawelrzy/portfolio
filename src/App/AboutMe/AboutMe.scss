@@ -1,10 +1,6 @@
 @import '../../styles/breakpoints.scss';
 
-.footer {
-    margin-top: 2rem;
-}
-
-.contact-me {
+.about-me {
     padding-top: 7rem !important;
     @include desktop-up {
         padding-top: 10rem !important;
@@ -12,10 +8,6 @@
     }
 }
 
-.contact-content {
+.about-me-content {
     border: none;
-}
-
-.send-button {
-    justify-content: center !important;
 }

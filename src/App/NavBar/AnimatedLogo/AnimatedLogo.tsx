@@ -6,7 +6,7 @@ import logo from '../../../logo.jpg';
 class AnimatedLogo extends Component {
     render () {
         return (
-            <div>
+            <div className="logo-container">
                 <img src={logo} className="logo" alt="logo" />
             </div>
         );

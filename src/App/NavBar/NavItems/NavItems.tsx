@@ -9,43 +9,30 @@ const NavItems: FC = () => {
     return (
         <div className="navbar-end nav-items">
             <ScrollLink 
-                to="my-story" 
-                spy={true} 
-                smooth={true} 
-                duration={500} 
+                to="about-me" 
+                smooth
                 className="navbar-item"
-                offset={-200}
-                // activeClass='some-active-class'
             >
-                My Story
+                About Me
             </ScrollLink>  
             <ScrollLink 
-                to="expertise" 
-                spy={true} 
-                smooth={true} 
-                duration={500}
-                offset={-200} 
+                to="knowledge" 
+                smooth
                 className="navbar-item"
             >
-                Expertise
+                Knowledge
             </ScrollLink> 
             <ScrollLink 
-                to="past-experience" 
-                spy={true} 
-                smooth={true} 
-                duration={500}
-                offset={-200} 
+                to="experience" 
+                smooth
                 className="navbar-item"
             >
-                Past Experiences
+                Experience
             </ScrollLink> 
             <ScrollLink 
                 to="contact-me" 
-                spy={true} 
-                smooth={true} 
-                duration={500}
-                offset={-200} 
-                className="navbar-item contact-button button is-primary"
+                smooth
+                className="navbar-item contact-button button"
             >
                 Say Hello &nbsp;<span role="img" aria-label="wave">👋🏽</span>
             </ScrollLink>
