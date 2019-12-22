@@ -6,6 +6,7 @@ import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
 import Experience from './Experience/Experience';
+import ResumeBanner from './ResumeBanner/ResumeBanner';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
 
@@ -50,6 +51,7 @@ class App extends Component<{}, AppState> {
                 <Element id="experience" name="experience">
                     <Experience />
                 </Element>
+                <ResumeBanner />
                 <Element id="contact-me" name="contact-me">
                     <ContactMe />
                 </Element>

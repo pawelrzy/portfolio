@@ -6,6 +6,7 @@ const AboutMe: FC = () => {
         <section className="container about-me columns">
             <div className="column">
                 <h1 className="title is-3">About Me</h1>
+                <div className="cricket-photo" />
             </div>
             <div className="column">
                 <article className="message">
@@ -18,13 +19,14 @@ const AboutMe: FC = () => {
                         </p>
                         <br/>
                         <p>
-                            In my personal time, I enjoy playing pickup with just about any sport 
-                            available, I love reaching new PRs at the gym, hitting insane shots 
+                            In my personal time, I love watching cricket (Go Windies! 🏏🌴)
+                            and enjoy playing pickup with just about any sport 
+                            available. I love reaching new PRs at the gym, hitting insane shots 
                             in pool, and practicing trick-shots in Rocket League.
                         </p>
                         <br/>
                         <p>
-                            I'm particularly interested in machine learning as I want to bridge 
+                            Apart from full stack, I'm particularly interested in machine learning as I want to bridge 
                             the gap between the human brain and a computer. I believe there are 
                             more important things for humans to be doing rather than say, 
                             driving for hours, reading spam emails, or handling customer support 

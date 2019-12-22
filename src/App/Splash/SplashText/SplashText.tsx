@@ -11,7 +11,7 @@ const SplashText: FC = () => {
             <h2 className="subtitle">
                 I like to build beautiful things for wonderful people. 
                 <br/>
-                I’m currently looking for internships for the Summer/Fall 2020 season.
+                I’m currently looking for internships for the Summer/Fall 2020 seasons.
             </h2>
         </div>
     );

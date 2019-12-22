@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-scroll';
 
 import './Footer.scss'
 
@@ -22,6 +23,14 @@ const Footer: FC = () => {
                         </a>
                     </div>
                     <p>© 2019 Michael Vytlingam. All Rights Reserved.</p>
+                </div>
+                <div className="column footer-right">
+                    <Link
+                        to="splash"
+                        smooth
+                    >
+                        <i className="fas fa-arrow-up"></i>
+                    </Link>
                 </div>
             </section>
             

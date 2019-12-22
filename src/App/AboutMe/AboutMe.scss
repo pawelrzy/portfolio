@@ -1,5 +1,12 @@
 @import '../../styles/breakpoints.scss';
 
+.cricket-photo {
+    background-image: url("../../assets/cricket.gif");
+    background-position: 50% 62%;
+    background-size: cover;
+    height: 20rem;
+}
+
 .about-me {
     padding-top: 7rem !important;
     @include desktop-up {

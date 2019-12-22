@@ -21,7 +21,7 @@ const Knowledge: FC = () => {
             </div>
             <article className="column">
                 <div>
-                    <h1 className="title is-5">Languages</h1>
+                    <h1 className="is-size-5">Languages</h1>
                     <div className="tags">
                         { languages.map(item => (
                             <span className="tag">{item}</span>
@@ -29,15 +29,15 @@ const Knowledge: FC = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className="title is-5">Front End</h1>
+                    <h1 className="is-size-5">Front End</h1>
                     <div>
-                        <h1 className="title is-7">Design</h1>
+                        <h1 className="is-size-7">Design</h1>
                         <div className="tags">
                             { frontend.design.map(item => (
                                 <span className="tag">{item}</span>
                             ))}
                         </div>
-                        <h1 className="title is-7">Tools</h1>
+                        <h1 className="is-size-7">Tools</h1>
                         <div className="tags">
                             { frontend.tools.map(item => (
                                 <span className="tag">{item}</span>
@@ -46,7 +46,7 @@ const Knowledge: FC = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className="title is-5">Back End</h1>
+                    <h1 className="is-size-5">Back End</h1>
                     <div className="tags">
                         { backend.map(item => (
                             <span className="tag">{item}</span>
@@ -54,7 +54,7 @@ const Knowledge: FC = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className="title is-5">Infrastructure</h1>
+                    <h1 className="is-size-5">Infrastructure</h1>
                     <div className="tags">
                         { infrastructure.map(item => (
                             <span className="tag">{item}</span>
@@ -62,15 +62,15 @@ const Knowledge: FC = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className="title is-5">Machine Learning</h1>
+                    <h1 className="is-size-5">Machine Learning</h1>
                     <div>
-                        <h1 className="title is-7">Tools</h1>
+                        <h1 className="is-size-7">Tools</h1>
                         <div className="tags">
                             { ml.tools.map(item => (
                                 <span className="tag">{item}</span>
                             ))}
                         </div>
-                        <h1 className="title is-7">Specific Interests</h1>
+                        <h1 className="is-size-7">Specific Interests</h1>
                         <div className="tags">
                             { ml.interests.map(item => (
                                 <span className="tag">{item}</span>

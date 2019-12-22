@@ -5,8 +5,8 @@
 
     background-image: url("../../../assets/selfie.jpg");
     background-position: center;
-    background-size: 240%;
-    background-position: 62% 15%;
+    background-size: cover;
+    filter: brightness(90%);
 
     border-radius: 1rem;
 }

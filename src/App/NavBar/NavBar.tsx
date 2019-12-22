@@ -24,7 +24,7 @@ const NavBar: FC = () => {
     }
 
     return (
-        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top animated fadeIn" role="navigation" aria-label="main navigation">
             <div className="container">
                 <div className="navbar-brand logo-container">
                     <Link

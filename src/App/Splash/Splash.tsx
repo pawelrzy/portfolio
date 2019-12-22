@@ -8,12 +8,12 @@ import Portrait from './Portrait/Portrait';
 const Splash: FC = () => {
     return (
         <section className="container splash">
-            <div className="splash-content animated fadeIn">
+            <div className="splash-content animated fadeIn delay-1s">
                 <SplashText />
                 <Portrait />
             </div>
             <Link 
-                className="arrow-down animated bounce delay-2s"
+                className="arrow-down animated bounce delay-2s infinite slow"
                 to="about-me"
                 smooth
             >

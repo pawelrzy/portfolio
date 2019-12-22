@@ -41,7 +41,7 @@ const ContactMe: FC = () => {
 
                             <div className="field is-grouped send-button">
                                 <div className="control">
-                                    <input className="button is-link" type="submit" value="Send 📬" />
+                                    <input className="button" type="submit" value="Send 📬" />
                                 </div>
                             </div>
 
