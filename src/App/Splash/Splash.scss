@@ -1,4 +1,8 @@
+@import '../../styles/breakpoints.scss';
+
 .splash {
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,11 +13,14 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    // @include tablet-and-under {
-    //     flex-direction: column;
-    // }
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    @include desktop-up {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-around;
+    }
 }
 
 .arrow-down {

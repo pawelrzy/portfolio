@@ -1,6 +1,11 @@
+@import '../../styles/breakpoints.scss';
+
 .knowledge {
-    padding-top: 10rem !important;
-    padding-bottom: 10rem !important;
+    padding-top: 7rem !important;
+    @include desktop-up {
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
 }
 
 .tags {
