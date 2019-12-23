@@ -82,8 +82,8 @@ const Experiences: FC = () => {
                 <h1 className="title is-3">Experience</h1>
             </div>
             <div className="column">
-                { jobs.reverse().map(job => (
-                    <article className="message">
+                { jobs.reverse().map((job, index) => (
+                    <article key={index} className="message">
                         <div className="message-body">
                             <h1 className="title is-6"><b>{job.company} /</b> {job.position}</h1>
                             <p dangerouslySetInnerHTML={{__html: job.body}}></p>

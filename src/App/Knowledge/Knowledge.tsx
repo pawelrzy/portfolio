@@ -23,8 +23,8 @@ const Knowledge: FC = () => {
                 <div className="category">
                     <h1 className="title is-size-4">Languages</h1>
                     <div className="tags">
-                        { languages.map(item => (
-                            <span className="tag is-info is-rounded is-light">{item}</span>
+                        { languages.map((item, index) => (
+                            <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                         ))}
                     </div>
                 </div>
@@ -33,14 +33,14 @@ const Knowledge: FC = () => {
                     <div>
                         <h1 className="title is-size-6 sub-category-title">Design</h1>
                         <div className="tags">
-                            { frontend.design.map(item => (
-                                <span className="tag is-info is-rounded is-light">{item}</span>
+                            { frontend.design.map((item, index) => (
+                                <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                             ))}
                         </div>
                         <h1 className="title is-size-6 sub-category-title">Tools</h1>
                         <div className="tags">
-                            { frontend.tools.map(item => (
-                                <span className="tag is-info is-rounded is-light">{item}</span>
+                            { frontend.tools.map((item, index) => (
+                                <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                             ))}
                         </div>
                     </div>
@@ -48,16 +48,16 @@ const Knowledge: FC = () => {
                 <div className="category">
                     <h1 className="title is-size-4">Back End</h1>
                     <div className="tags">
-                        { backend.map(item => (
-                            <span className="tag is-info is-rounded is-light">{item}</span>
+                        { backend.map((item, index) => (
+                            <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                         ))}
                     </div>
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Infrastructure</h1>
                     <div className="tags">
-                        { infrastructure.map(item => (
-                            <span className="tag is-info is-rounded is-light">{item}</span>
+                        { infrastructure.map((item, index) => (
+                            <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                         ))}
                     </div>
                 </div>
@@ -66,14 +66,14 @@ const Knowledge: FC = () => {
                     <div>
                         <h1 className="title is-size-6 sub-category-title">Tools</h1>
                         <div className="tags">
-                            { ml.tools.map(item => (
-                                <span className="tag is-info is-rounded is-light">{item}</span>
+                            { ml.tools.map((item, index) => (
+                                <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                             ))}
                         </div>
                         <h1 className="title is-size-6 sub-category-title">Specific Interests</h1>
                         <div className="tags">
-                            { ml.interests.map(item => (
-                                <span className="tag is-info is-rounded is-light">{item}</span>
+                            { ml.interests.map((item, index) => (
+                                <span key={index} className="tag is-info is-rounded is-light">{item}</span>
                             ))}
                         </div>
                     </div>

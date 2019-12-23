@@ -19,7 +19,8 @@ const AboutMe: FC = () => {
                         </p>
                         <br/>
                         <p>
-                            In my personal time, I love watching cricket (Go Windies! 🏏🌴)
+                            In my personal time, I love watching cricket (Go Windies! &nbsp;
+                            <span role="img" aria-label="cricket and palm tree">🏏🌴</span>)
                             and enjoy playing pickup with just about any sport 
                             available. I love reaching new PRs at the gym, hitting insane shots 
                             in pool, and practicing trick-shots in Rocket League.
