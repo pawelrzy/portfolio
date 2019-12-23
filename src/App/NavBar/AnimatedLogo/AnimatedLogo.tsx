@@ -3,7 +3,11 @@ import './AnimatedLogo.scss'
 
 import AnimatedName from './AnimatedName/AnimatedName';
 
-class AnimatedLogo extends Component {
+interface AnimatedLogoProps {
+    update: boolean
+}
+
+class AnimatedLogo extends Component<AnimatedLogoProps> {
     render () {
         const isDesktop = window.innerWidth > 1024;
         return (
