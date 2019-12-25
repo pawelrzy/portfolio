@@ -10,7 +10,7 @@ const ContactMe: FC = () => {
             </div>
             <div className="column">
                 <article className="message">
-                    <div className="message-body contact-content">
+                    <div className="message-body">
                         <form 
                             name="input"
                             className="field"

@@ -10,7 +10,7 @@ const AboutMe: FC = () => {
             </div>
             <div className="column">
                 <article className="message">
-                    <div className="message-body about-me-content">
+                    <div className="message-body">
                         <p>
                             Hi, I'm Michael Vytlingam. I am a <b>Full Stack 
                             Developer</b> and <b>Machine Learning</b> enthusiast from Toronto, CA. 

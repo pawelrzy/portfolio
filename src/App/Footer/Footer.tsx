@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 
-import ResumePath from '../../assets/resume.pdf';
+// import ResumePath from '../../assets/resume.pdf';
 
 import './Footer.scss'
 
@@ -25,15 +25,15 @@ const Footer: FC = () => {
                                 <i className="fab fa-kaggle social-icon"></i>
                             </a>
                         </div>
-                        <div className="column resume-button">
+                        {/* <div className="column resume-button">
                             <a href={ResumePath} target="_blank" rel="noopener noreferrer" className="button">
                                 View Full Resume
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                     <p>© 2019 Michael Vytlingam. All Rights Reserved.</p>
                 </div>
-                <div className="is-divider-vertical"></div>
+                {/* <div className="is-divider-vertical"></div> */}
                 <div className="column footer-right">
                     <Link
                         to="splash"
