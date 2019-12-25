@@ -3,7 +3,7 @@ import './Experience.scss';
 
 import JobCard from './JobCard/JobCard';
 
-const Experiences: FC = () => {
+const Experience: FC = () => {
     const jobs = [
         {
             logo: "uw.jpg",
@@ -133,4 +133,4 @@ const Experiences: FC = () => {
     );
 }
 
-export default Experiences;
+export default Experience;

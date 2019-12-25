@@ -8,7 +8,7 @@ interface JobCardProps {
 const JobCard: FC<JobCardProps> = (props: JobCardProps) => {
     const { job } = props;
     return (
-        <article className="message">
+        <article className="message job-card">
             {job.hasOwnProperty('coverPhoto') && 
                 <div 
                     className="message-header cover-photo"
