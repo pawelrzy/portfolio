@@ -5,7 +5,7 @@ import './ContactMe.scss';
 const ContactMe: FC = () => {
     return (
         <section className="container contact-me">
-            <h1 className="title is-3 has-text-centered">Contact Me</h1>
+            <h1 className="title is-3 has-text-centered">Let's Grab Coffee <span role="img" aria-label="coffee">☕️</span></h1>
             <div className="columns">
                 <div className="column is-half is-offset-one-quarter">
                     <article className="message">
