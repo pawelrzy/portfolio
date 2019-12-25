@@ -4,9 +4,11 @@ import './Experience.scss';
 const Experiences: FC = () => {
     const jobs = [
         {
+            logo: "mvgd.jpg",
             company: "MVGD",
             position: "Freelance Graphic Designer",
-            date: "December 2015 - September 2018",
+            date: "Dec 2015 - Sept 2018",
+            location: "Remote",
             body: `
                 I created logos, banners, documents, and websites for 
                 various clients, including the University of Toronto 
@@ -14,9 +16,11 @@ const Experiences: FC = () => {
             `
         },
         {
+            logo: "logo.jpg",
             company: "Snyder Construction",
             position: "Assistant Project Manager",
-            date: "January 2018 - April 2018",
+            date: "Jan 2018 - Apr 2018",
+            location: "Whitby, ON",
             body: `
                 I was involved in all aspects of Snyder's construction
                 projects, from price estimation to closeout. I drew up 
@@ -29,9 +33,12 @@ const Experiences: FC = () => {
             `
         },
         {
+            logo: "engineering.jpg",
+            coverPhoto: "engineering-cover.jpg",
             company: "ENGINEERING.com",
             position: "Software Engineering Intern",
-            date: "September 2018 - December 2018",
+            date: "Sept 2018 - Dec 2018",
+            location: "Toronto, ON",
             body: `
                 I was working on ENGINEERING.com's online collaboration platform, ProjectBoard. 
                 I designed and developed the new home page for the platform as well as the user 
@@ -43,15 +50,20 @@ const Experiences: FC = () => {
             `
         },
         {
+            logo: "gd.jpg",
+            coverPhoto: "gd-cover.jpg",
             company: "Grain Discovery",
             position: "Software Engineering Intern",
-            date: "May 2019 - August 2019",
+            date: "May 2019 - Aug 2019",
+            location: "Toronto, ON",
             body: `
                 I worked on Grain Discovery's agricultural trading marketplace. 
                 Introducing effective UI/UX was a challenge due to the wide demographics
                 of users using the platform, from farmers to business traders. 
                 However, introducing simplified user flows, and quick access to important 
-                information proved to be effective in user testing. Outside of front end, 
+                information proved to be effective in user testing. 
+                <br />
+                Outside of front end, 
                 I also created RESTful endpoints to handle user interaction, as well as 
                 incorporated Bash scripts to streamline developer pipelines.
                 <br/>
@@ -62,11 +74,13 @@ const Experiences: FC = () => {
             `
         },
         {
+            logo: "uw.jpg",
             company: "University of Waterloo",
             position: "Machine Learning Researcher",
-            date: "September 2019 - December 2019",
+            date: "Sept 2019 - Dec 2019",
+            location: "Waterloo, ON",
             body: `
-                Took part in training real-time object detection model of 
+                I took part in training real-time object detection model of 
                 kitchen items to help a robot operate in its surroundings. 
                 I can't tell you the specifics as we're still working on it, 
                 but trust me, it's really cool.
@@ -84,8 +98,25 @@ const Experiences: FC = () => {
             <div className="column">
                 { jobs.reverse().map((job, index) => (
                     <article key={index} className="message">
+                        {job.hasOwnProperty('coverPhoto') && 
+                            <div 
+                                className="message-header cover-photo"
+                                style={{backgroundImage: `url('${require(`../../assets/${job.coverPhoto}`)}')`}} />
+                        }
                         <div className="message-body">
-                            <h1 className="title is-6"><b>{job.company} /</b> {job.position}</h1>
+                            <div className="title-row">
+                                <img 
+                                    src={require(`../../assets/${job.logo}`)} 
+                                    alt={`${job.company} logo`}
+                                    className="company-logo"
+                                />
+                                <div className="company-name">
+                                    <div>
+                                        <h1 className="is-size-6"><b>{job.company} /</b>&nbsp;{job.position}</h1>
+                                    </div>
+                                    <p className="has-text-grey is-size-7">{job.location} | {job.date}</p>
+                                </div>
+                            </div>
                             <p dangerouslySetInnerHTML={{__html: job.body}}></p>
                         </div>
                     </article>
