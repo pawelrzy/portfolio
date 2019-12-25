@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import './Experience.scss';
 
+import JobCard from './JobCard/JobCard';
+
 const Experiences: FC = () => {
     const jobs = [
         {
@@ -100,65 +102,33 @@ const Experiences: FC = () => {
         }
     }
 
+    const isDesktop = window.innerWidth > 1024;
+
     return (
         <section className="container experience">
             <h1 className="title has-text-centered is-3">Experience</h1>
-            <div className="columns">
-                <div className="column">
-                    { leftJobs.map((job, index) => (
-                        <article key={index} className="message">
-                            {job.hasOwnProperty('coverPhoto') && 
-                                <div 
-                                    className="message-header cover-photo"
-                                    style={{backgroundImage: `url('${require(`../../assets/${job.coverPhoto}`)}')`}} />
-                            }
-                            <div className="message-body">
-                                <div className="title-row">
-                                    <img 
-                                        src={require(`../../assets/${job.logo}`)} 
-                                        alt={`${job.company} logo`}
-                                        className="company-logo"
-                                    />
-                                    <div className="company-name">
-                                        <div>
-                                            <h1 className="is-size-6"><b>{job.company} /</b>&nbsp;{job.position}</h1>
-                                        </div>
-                                        <p className="has-text-grey is-size-7">{job.location} | {job.date}</p>
-                                    </div>
-                                </div>
-                                <p dangerouslySetInnerHTML={{__html: job.body}}></p>
-                            </div>
-                        </article>
-                    ))}
+            { isDesktop ? (
+                <div className="columns">
+                    <div className="column">
+                        { leftJobs.map((job, index) => (
+                            <JobCard key={index} job={job} />
+                        ))}
+                    </div>
+                    <div className="column">
+                        { rightJobs.map((job, index) => (
+                            <JobCard key={index} job={job} />
+                        ))}
+                    </div>
                 </div>
-                <div className="column">
-                    { rightJobs.map((job, index) => (
-                        <article key={index} className="message">
-                            {job.hasOwnProperty('coverPhoto') && 
-                                <div 
-                                    className="message-header cover-photo"
-                                    style={{backgroundImage: `url('${require(`../../assets/${job.coverPhoto}`)}')`}} />
-                            }
-                            <div className="message-body">
-                                <div className="title-row">
-                                    <img 
-                                        src={require(`../../assets/${job.logo}`)} 
-                                        alt={`${job.company} logo`}
-                                        className="company-logo"
-                                    />
-                                    <div className="company-name">
-                                        <div>
-                                            <h1 className="is-size-6"><b>{job.company} /</b>&nbsp;{job.position}</h1>
-                                        </div>
-                                        <p className="has-text-grey is-size-7">{job.location} | {job.date}</p>
-                                    </div>
-                                </div>
-                                <p dangerouslySetInnerHTML={{__html: job.body}}></p>
-                            </div>
-                        </article>
-                    ))}
+            ) : (
+                <div className="columns">
+                    <div className="column">
+                        { jobs.map((job, index) => (
+                            <JobCard key={index} job={job} />
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
         </section>    
     );
 }

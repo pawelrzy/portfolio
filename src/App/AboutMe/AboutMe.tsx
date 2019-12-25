@@ -3,12 +3,10 @@ import './AboutMe.scss';
 
 const AboutMe: FC = () => {
     return (
-        <section className="container about-me columns">
-            <div className="column">
-                <h1 className="title is-3">About Me</h1>
+        <section className="container about-me">
+            <h1 className="title has-text-centered is-3">About Me</h1>
+            <div className="column is-half is-offset-one-quarter">
                 <div className="cricket-photo" />
-            </div>
-            <div className="column">
                 <article className="message">
                     <div className="message-body">
                         <p>
