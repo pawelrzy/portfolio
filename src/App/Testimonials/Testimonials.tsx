@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Testimonials.scss';
 
 import Testimonial from './Testimonial/Testimonial';
 
