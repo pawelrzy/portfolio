@@ -48,7 +48,6 @@ const ContactMe: FC = () => {
                         </form>
                     </div>
                 </article>
-
             </div>
         </section>
     );
