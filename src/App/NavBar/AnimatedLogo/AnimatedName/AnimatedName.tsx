@@ -11,7 +11,7 @@ class AnimatedName extends Component {
     };
     
     componentDidMount() {
-        const timer = setInterval(this.togglePosition, 3000);
+        const timer = setInterval(this.togglePosition, 4000);
         this.setState({ timer: timer });
     }
 
@@ -21,11 +21,13 @@ class AnimatedName extends Component {
 
     togglePosition = () => {
         const position = this.state.position ? 0 : 1;
-        this.setState({ position: position });
         const element =  document.querySelector('.position-text');
         if (element) {
-            element.classList.add( position ? 'fadeIn' : 'flash');
-            element.classList.remove( position ? 'flash' : 'fadeIn');
+            element.classList.remove('fadeIn');
+            setTimeout(() => {
+                this.setState({ position: position });
+                element.classList.add('fadeIn');
+            }, 100);
         }
     }
 
