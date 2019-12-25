@@ -1,8 +1,10 @@
+@import '../../styles/breakpoints.scss';
+
 .navbar {
-    height: 7rem;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0.5rem;
+    @include desktop-up {
+        padding: 1rem;
+    }
 }
 
 .logo-container {

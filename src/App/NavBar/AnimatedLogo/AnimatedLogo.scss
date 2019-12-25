@@ -1,11 +1,17 @@
+@import '../../../styles/breakpoints.scss';
+
 .logo-container {
     display: flex;
     align-items: center;
 }
 .logo {
     border-radius: 0.8rem;
-    height: 5rem;
-    width: 5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    @include desktop-up {
+        height: 5rem;
+        width: 5rem;
+    }
 
     background-image: url("../../../assets/logo.jpg");
     background-position: center;
