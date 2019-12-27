@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import './Experience.scss';
 
-import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import withTitle from '../../HOCs/withTitle/withTitle';
 import JobCard from './JobCard/JobCard';
 
@@ -132,4 +131,4 @@ const Experience: FC = () => {
     );
 }
 
-export default withAnimation(withTitle('Experiences', Experience));
+export default withTitle('Experiences', Experience);

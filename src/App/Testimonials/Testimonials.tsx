@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import withTitle from '../../HOCs/withTitle/withTitle';
 import Testimonial from './Testimonial/Testimonial';
 
@@ -98,4 +97,4 @@ class Testimonials extends Component {
     }
 }
 
-export default withAnimation(withTitle('Recommendations', Testimonials));
+export default withTitle('Recommendations', Testimonials);

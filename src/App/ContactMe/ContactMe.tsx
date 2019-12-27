@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 
-import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import withTitle from '../../HOCs/withTitle/withTitle';
 import './ContactMe.scss';
 
@@ -50,4 +49,4 @@ const ContactMe: FC = () => {
     );
 };
 
-export default withAnimation(withTitle('Let\'s Grab Coffee ☕️', ContactMe));
+export default withTitle('Let\'s Grab Coffee ☕️', ContactMe);
