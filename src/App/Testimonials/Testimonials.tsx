@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// import withAnimation from '../../HOCs/withAnimation/withAnimation';
+import withTitle from '../../HOCs/withTitle/withTitle';
 import Testimonial from './Testimonial/Testimonial';
 
 const testimonials = [
@@ -76,9 +78,7 @@ class Testimonials extends Component {
 
     togglePosition = () => {
         const index = this.state.index < testimonials.length - 1 ? this.state.index + 1: 0;
-        console.log(index);
         const element =  document.querySelector('.testimonial');
-        console.log(element);
         if (element) {
             element.classList.remove('fadeIn');
             setTimeout(() => {
@@ -91,16 +91,11 @@ class Testimonials extends Component {
     render () {
         const { index } = this.state;
         return (
-            <section className="container testimonials">
-                <h1 className="title has-text-centered is-3">Testimonials</h1>
-                    <div className="columns">
-                        <div className="column is-half is-offset-one-quarter">
-                            <Testimonial testimonial={testimonials[index]} />
-                        </div>
-                    </div>
-            </section>    
+            <div className="column is-half is-offset-one-quarter">
+                <Testimonial testimonial={testimonials[index]} />
+            </div>
         );
     }
 }
 
-export default Testimonials;
+export default withTitle('Recommendations', Testimonials);

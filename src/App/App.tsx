@@ -15,25 +15,6 @@ interface AppState {
 }
 
 class App extends Component<{}, AppState> {
-    state: AppState = {
-        hasScrolled: false
-    };
-
-    componentDidMount () {
-        document.addEventListener('scroll', this.checkScroll);
-    }
-
-    componentWillUnmount () {
-        document.removeEventListener('scroll', this.checkScroll);
-    }
-
-    checkScroll = () => {
-        if (window.scrollY > 0 && !this.state.hasScrolled) {
-            this.setState({ hasScrolled: true });
-        } else if (window.scrollY === 0 && this.state.hasScrolled) {
-            this.setState({ hasScrolled: false });
-        }
-    }
 
     render () {
         return (

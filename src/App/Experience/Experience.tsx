@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import './Experience.scss';
 
+// import withAnimation from '../../HOCs/withAnimation/withAnimation';
+import withTitle from '../../HOCs/withTitle/withTitle';
 import JobCard from './JobCard/JobCard';
 
 const Experience: FC = () => {
@@ -105,9 +107,7 @@ const Experience: FC = () => {
     const isDesktop = window.innerWidth > 1024;
 
     return (
-        <section className="container experience">
-            <h1 className="title has-text-centered is-3">Experience</h1>
-            { isDesktop ? (
+        isDesktop ? (
                 <div className="columns">
                     <div className="column">
                         { leftJobs.map((job, index) => (
@@ -128,9 +128,8 @@ const Experience: FC = () => {
                         ))}
                     </div>
                 </div>
-            )}
-        </section>    
+            )  
     );
 }
 
-export default Experience;
+export default withTitle('Experiences', Experience);
