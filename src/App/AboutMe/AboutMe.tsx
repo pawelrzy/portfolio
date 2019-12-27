@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './AboutMe.scss';
 
-// import withAnimation from '../../HOCs/withAnimation/withAnimation';
+import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import withTitle from '../../HOCs/withTitle/withTitle';
 
 const AboutMe: FC = () => {
@@ -46,4 +46,4 @@ const AboutMe: FC = () => {
     );
 };
 
-export default withTitle('About Me', AboutMe);
+export default withAnimation(withTitle('About Me', AboutMe));

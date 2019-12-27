@@ -2,13 +2,14 @@ import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 import './Splash.scss';
 
+import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import SplashText from './SplashText/SplashText';
 import Portrait from './Portrait/Portrait';
 
 const Splash: FC = () => {
     return (
         <section className="container splash">
-            <div className="splash-content animated fadeIn delay-1s">
+            <div className="splash-content">
                 <SplashText />
                 <Portrait />
             </div>
@@ -23,4 +24,4 @@ const Splash: FC = () => {
     );
 }
 
-export default Splash;
+export default withAnimation(Splash);

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-// import withAnimation from '../../HOCs/withAnimation/withAnimation';
+import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import withTitle from '../../HOCs/withTitle/withTitle';
 
 import './Knowledge.scss';
@@ -81,4 +81,4 @@ const Knowledge: FC = () => {
     );
 };
 
-export default withTitle('Knowledge', Knowledge);
+export default withAnimation(withTitle('Knowledge', Knowledge));
