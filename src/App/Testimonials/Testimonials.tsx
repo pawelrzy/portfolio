@@ -7,17 +7,8 @@ const testimonials = [
     {
         name: 'Renata Vaccaro',
         title: 'CTO at engineering.com & Co-founder of ProjectBoard',
-        photo:
-            'https://media.licdn.com/dms/image/C5603AQGor7Qph0cFNQ/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=CE4hVD61Y3xJlBP7lnOP-8CRVCbOgOgdy5GWHyWwkk0',
+        photo: 'renata.jpeg',
         body: `
-                It is my absolute pleasure to write this recommendation for Michael.
-                <br />
-                <br />
-                Michael and I worked together at Engineering.com for his Fall 2018 
-                Co-op term. I very much enjoyed working with him and he quickly became
-                 a valuable asset to the team.
-                <br />
-                <br />
                 Michael was hired to work as a Developer and Community Manager. He not 
                 only exceeded our expectations in these roles, but took on responsibilities 
                 that were outside of his job description like social media promotion, creating 
@@ -40,8 +31,7 @@ const testimonials = [
     {
         name: 'Warren K.P. Lamb',
         title: 'Blockchain Engineer at Grain Discovery',
-        photo:
-            'https://media.licdn.com/dms/image/C5603AQFC8EKKUZG2sg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=wQW6XFth8ELOwYsGnqjqOoqwuOL7i_SAmbHyhWgFjnc',
+        photo: 'warren.jpeg',
         body: `
                 Michael was an exceptional employee during his time at Grain Discovery. 
                 He performed all tasks effectively and consistently went above and beyond 
@@ -53,8 +43,7 @@ const testimonials = [
     {
         name: 'Patrick McCormack',
         title: 'Event Producer at FITC',
-        photo:
-            'https://media.licdn.com/dms/image/C5603AQHzGbkMZ-b_Zg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=-hDlBYZ4F5BTra4XVG3NsHPanvAquy3LtHH-pqPv2zw',
+        photo: 'patrick.jpeg',
         body: `
                 Friendly, professional, and comfortable under pressure - Michael 
                 was an exemplary worker in every way. He's welcome to work with 

@@ -8,7 +8,6 @@ import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
 import Experience from './Experience/Experience';
-import Testimonials from './Testimonials/Testimonials';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
 
@@ -33,7 +32,6 @@ class App extends Component<{}, AppState> {
                 <Element id="experience" name="experience">
                     <Experience />
                 </Element>
-                <Testimonials />
                 <Element id="contact-me" name="contact-me">
                     <ContactMe />
                 </Element>

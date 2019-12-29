@@ -1,9 +1,9 @@
 @import '../../styles/breakpoints.scss';
 
 .with-title {
-    min-height: 100vh;
     padding-top: 7rem !important;
     @include desktop-up {
+        min-height: 100vh;
         padding-top: 10rem !important;
         padding-bottom: 10rem !important;
     }
