@@ -64,7 +64,7 @@ const Experience: FC = () => {
             `
         },
         {
-            logo: 'logo.jpg',
+            logo: 'snyder.jpg',
             company: 'Snyder Construction',
             position: 'Assistant Project Manager',
             date: 'Jan 2018 - Apr 2018',

@@ -35,7 +35,6 @@ const Knowledge: FC = () => {
         'Express',
         'ElasticSearch',
         'Django',
-        'MongoDB',
         'Apollo GraphQL'
     ];
     const infrastructure = [

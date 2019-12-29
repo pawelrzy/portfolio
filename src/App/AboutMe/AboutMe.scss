@@ -1,8 +1,16 @@
 .cricket-photo {
-    background-image: url("../../assets/cricket.gif");
+    background-image: url('../../assets/cricket.gif');
     background-position: 50% 62%;
     background-size: cover;
     height: 20rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
+}
+
+.sign-off {
+    margin-top: 2rem;
+}
+
+.signature {
+    height: 3rem;
 }
