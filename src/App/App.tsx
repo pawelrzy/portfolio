@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Element } from 'react-scroll';
 
+import './App.scss';
+
 import NavBar from './NavBar/NavBar';
 import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
