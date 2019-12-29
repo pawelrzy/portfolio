@@ -7,11 +7,11 @@ import JobCard from './JobCard/JobCard';
 const Experience: FC = () => {
     const jobs = [
         {
-            logo: "uw.jpg",
-            company: "University of Waterloo",
-            position: "Machine Learning Researcher",
-            date: "Sept 2019 - Dec 2019",
-            location: "Waterloo, ON",
+            logo: 'uw.jpg',
+            company: 'University of Waterloo',
+            position: 'Machine Learning Researcher',
+            date: 'Sept 2019 - Dec 2019',
+            location: 'Waterloo, ON',
             body: `
                 I took part in training real-time object detection model of 
                 kitchen items to help a robot operate in its surroundings. 
@@ -23,12 +23,12 @@ const Experience: FC = () => {
             `
         },
         {
-            logo: "gd.jpg",
-            coverPhoto: "gd-cover.jpg",
-            company: "Grain Discovery",
-            position: "Software Engineering Intern",
-            date: "May 2019 - Aug 2019",
-            location: "Toronto, ON",
+            logo: 'gd.jpg',
+            coverPhoto: 'gd-cover.jpg',
+            company: 'Grain Discovery',
+            position: 'Software Engineering Intern',
+            date: 'May 2019 - Aug 2019',
+            location: 'Toronto, ON',
             body: `
                 I worked on Grain Discovery's agricultural trading marketplace. 
                 Introducing effective UI/UX was a challenge due to the wide demographics
@@ -47,12 +47,12 @@ const Experience: FC = () => {
             `
         },
         {
-            logo: "engineering.jpg",
-            coverPhoto: "engineering-cover.jpg",
-            company: "ENGINEERING.com",
-            position: "Software Engineering Intern",
-            date: "Sept 2018 - Dec 2018",
-            location: "Toronto, ON",
+            logo: 'engineering.jpg',
+            coverPhoto: 'engineering-cover.jpg',
+            company: 'ENGINEERING.com',
+            position: 'Software Engineering Intern',
+            date: 'Sept 2018 - Dec 2018',
+            location: 'Toronto, ON',
             body: `
                 I was working on ENGINEERING.com's online collaboration platform, ProjectBoard. 
                 I designed and developed the new home page for the platform as well as the user 
@@ -64,11 +64,11 @@ const Experience: FC = () => {
             `
         },
         {
-            logo: "logo.jpg",
-            company: "Snyder Construction",
-            position: "Assistant Project Manager",
-            date: "Jan 2018 - Apr 2018",
-            location: "Whitby, ON",
+            logo: 'logo.jpg',
+            company: 'Snyder Construction',
+            position: 'Assistant Project Manager',
+            date: 'Jan 2018 - Apr 2018',
+            location: 'Whitby, ON',
             body: `
                 I was involved in all aspects of Snyder's construction
                 projects, from price estimation to closeout. I drew up 
@@ -81,54 +81,26 @@ const Experience: FC = () => {
             `
         },
         {
-            logo: "mvgd.jpg",
-            company: "MVGD",
-            position: "Freelance Graphic Designer",
-            date: "Dec 2015 - Sept 2018",
-            location: "Remote",
+            logo: 'mvgd.jpg',
+            company: 'MVGD',
+            position: 'Freelance Graphic Designer',
+            date: 'Dec 2015 - Sept 2018',
+            location: 'Remote',
             body: `
                 I created logos, banners, documents, and websites for 
                 various clients, including the University of Toronto 
                 Kendo Club, LSPDFR.com, and Rubiar.
             `
-        },
-    ];
-    let leftJobs = [];
-    let rightJobs = [];
-    for (let i = 0; i < jobs.length; i++){
-        if (i % 2 === 1) {
-            rightJobs.push(jobs[i]);
-        } else {
-            leftJobs.push(jobs[i]);
         }
-    }
-
-    const isDesktop = window.innerWidth > 1024;
+    ];
 
     return (
-        isDesktop ? (
-                <div className="columns">
-                    <div className="column">
-                        { leftJobs.map((job, index) => (
-                            <JobCard key={index} job={job} />
-                        ))}
-                    </div>
-                    <div className="column">
-                        { rightJobs.map((job, index) => (
-                            <JobCard key={index} job={job} />
-                        ))}
-                    </div>
-                </div>
-            ) : (
-                <div className="columns">
-                    <div className="column">
-                        { jobs.map((job, index) => (
-                            <JobCard key={index} job={job} />
-                        ))}
-                    </div>
-                </div>
-            )  
+        <div className="column is-half is-offset-one-quarter">
+            {jobs.map((job, index) => (
+                <JobCard key={index} job={job} />
+            ))}
+        </div>
     );
-}
+};
 
 export default withTitle('Experiences', Experience);

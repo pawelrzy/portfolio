@@ -13,7 +13,7 @@ const Splash: FC = () => {
                 <SplashText />
                 <Portrait />
             </div>
-            <Link 
+            <Link
                 className="arrow-down animated bounce delay-2s infinite slow"
                 to="about-me"
                 smooth
@@ -22,6 +22,6 @@ const Splash: FC = () => {
             </Link>
         </section>
     );
-}
+};
 
 export default withAnimation(Splash);

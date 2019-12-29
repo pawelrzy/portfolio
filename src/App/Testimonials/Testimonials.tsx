@@ -4,11 +4,12 @@ import withTitle from '../../HOCs/withTitle/withTitle';
 import Testimonial from './Testimonial/Testimonial';
 
 const testimonials = [
-        {
-            name: "Renata Vaccaro",
-            title: "CTO at engineering.com & Co-founder of ProjectBoard",
-            photo: "https://media.licdn.com/dms/image/C5603AQGor7Qph0cFNQ/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=CE4hVD61Y3xJlBP7lnOP-8CRVCbOgOgdy5GWHyWwkk0",
-            body: `
+    {
+        name: 'Renata Vaccaro',
+        title: 'CTO at engineering.com & Co-founder of ProjectBoard',
+        photo:
+            'https://media.licdn.com/dms/image/C5603AQGor7Qph0cFNQ/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=CE4hVD61Y3xJlBP7lnOP-8CRVCbOgOgdy5GWHyWwkk0',
+        body: `
                 It is my absolute pleasure to write this recommendation for Michael.
                 <br />
                 <br />
@@ -35,37 +36,39 @@ const testimonials = [
                 Michael made a huge impact on me and is someone I would hire, even if I wasn’t hiring. 
                 Any company would be very lucky to have him.
             `
-        },
-        {
-            name: "Warren K.P. Lamb",
-            title: "Blockchain Engineer at Grain Discovery",
-            photo: "https://media.licdn.com/dms/image/C5603AQFC8EKKUZG2sg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=wQW6XFth8ELOwYsGnqjqOoqwuOL7i_SAmbHyhWgFjnc",
-            body: `
+    },
+    {
+        name: 'Warren K.P. Lamb',
+        title: 'Blockchain Engineer at Grain Discovery',
+        photo:
+            'https://media.licdn.com/dms/image/C5603AQFC8EKKUZG2sg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=wQW6XFth8ELOwYsGnqjqOoqwuOL7i_SAmbHyhWgFjnc',
+        body: `
                 Michael was an exceptional employee during his time at Grain Discovery. 
                 He performed all tasks effectively and consistently went above and beyond 
                 in his execution. Michael needed very little management to excel in his 
                 position here and I would highly recommend him to anyone looking for a 
                 passionate, driven and skilled developer.
             `
-        },
-        {
-            name: "Patrick McCormack",
-            title: "Event Producer at FITC",
-            photo: "https://media.licdn.com/dms/image/C5603AQHzGbkMZ-b_Zg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=-hDlBYZ4F5BTra4XVG3NsHPanvAquy3LtHH-pqPv2zw",
-            body: `
+    },
+    {
+        name: 'Patrick McCormack',
+        title: 'Event Producer at FITC',
+        photo:
+            'https://media.licdn.com/dms/image/C5603AQHzGbkMZ-b_Zg/profile-displayphoto-shrink_100_100/0?e=1582761600&v=beta&t=-hDlBYZ4F5BTra4XVG3NsHPanvAquy3LtHH-pqPv2zw',
+        body: `
                 Friendly, professional, and comfortable under pressure - Michael 
                 was an exemplary worker in every way. He's welcome to work with 
                 me anytime!
             `
-        },
-    ];
+    }
+];
 
 class Testimonials extends Component {
     state = {
         index: 0,
-        timer: 0,
+        timer: 0
     };
-    
+
     componentDidMount() {
         const timer = setInterval(this.togglePosition, 10000);
         this.setState({ timer: timer });
@@ -76,8 +79,11 @@ class Testimonials extends Component {
     }
 
     togglePosition = () => {
-        const index = this.state.index < testimonials.length - 1 ? this.state.index + 1: 0;
-        const element =  document.querySelector('.testimonial');
+        const index =
+            this.state.index < testimonials.length - 1
+                ? this.state.index + 1
+                : 0;
+        const element = document.querySelector('.testimonial');
         if (element) {
             element.classList.remove('fadeIn');
             setTimeout(() => {
@@ -85,9 +91,9 @@ class Testimonials extends Component {
                 element.classList.add('fadeIn');
             }, 100);
         }
-    }
+    };
 
-    render () {
+    render() {
         const { index } = this.state;
         return (
             <div className="column is-half is-offset-one-quarter">

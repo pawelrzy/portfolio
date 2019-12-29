@@ -11,12 +11,11 @@ import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
 
 interface AppState {
-    hasScrolled: boolean
+    hasScrolled: boolean;
 }
 
 class App extends Component<{}, AppState> {
-
-    render () {
+    render() {
         return (
             <Fragment>
                 <NavBar />
