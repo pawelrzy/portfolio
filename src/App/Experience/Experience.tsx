@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './Experience.scss';
 
-import withTitle from '../../HOCs/withTitle/withTitle';
+import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 import JobCard from './JobCard/JobCard';
 
 const Experience: FC = () => {
@@ -95,7 +95,7 @@ const Experience: FC = () => {
     ];
 
     return (
-        <div className="column is-half is-offset-one-quarter">
+        <div>
             {jobs.map((job, index) => (
                 <JobCard key={index} job={job} />
             ))}
@@ -103,4 +103,4 @@ const Experience: FC = () => {
     );
 };
 
-export default withTitle('Experiences', Experience);
+export default withCenterFormatting('Experiences', Experience);

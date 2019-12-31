@@ -2,6 +2,7 @@
 
 .with-title {
     padding-top: 7rem !important;
+    background: white;
     @include desktop-up {
         min-height: 100vh;
         padding-top: 10rem !important;

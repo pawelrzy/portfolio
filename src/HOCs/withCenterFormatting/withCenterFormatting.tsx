@@ -1,11 +1,11 @@
 import React from 'react';
-import './withTitle.scss';
+import './withCenterFormatting.scss';
 
-const withTitle = (title: string, WrappedComponent: any) => {
+const withCenterFormatting = (title: string, WrappedComponent: any) => {
     //TODO: Fix
     return () => {
         return (
-            <div className="container with-title">
+            <div className="column is-half is-offset-one-quarter with-title">
                 <h1 className="title has-text-centered is-3">{title}</h1>
                 <WrappedComponent />
             </div>
@@ -13,4 +13,4 @@ const withTitle = (title: string, WrappedComponent: any) => {
     };
 };
 
-export default withTitle;
+export default withCenterFormatting;

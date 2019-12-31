@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import withTitle from '../../HOCs/withTitle/withTitle';
+import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 
 import './Knowledge.scss';
 
@@ -53,7 +53,7 @@ const Knowledge: FC = () => {
     };
     return (
         <div className="knowledge">
-            <article className="column is-half is-offset-one-quarter content-area">
+            <article>
                 <div className="category">
                     <h1 className="title is-size-4">Languages</h1>
                     <div className="tags">
@@ -160,4 +160,4 @@ const Knowledge: FC = () => {
     );
 };
 
-export default withTitle('Knowledge', Knowledge);
+export default withCenterFormatting('Knowledge', Knowledge);

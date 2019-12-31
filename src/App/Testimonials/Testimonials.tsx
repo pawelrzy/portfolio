@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import withTitle from '../../HOCs/withTitle/withTitle';
+import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 import Testimonial from './Testimonial/Testimonial';
 
 const testimonials = [
@@ -84,12 +84,8 @@ class Testimonials extends Component {
 
     render() {
         const { index } = this.state;
-        return (
-            <div className="column is-half is-offset-one-quarter">
-                <Testimonial testimonial={testimonials[index]} />
-            </div>
-        );
+        return <Testimonial testimonial={testimonials[index]} />;
     }
 }
 
-export default withTitle('Recommendations', Testimonials);
+export default withCenterFormatting('Recommendations', Testimonials);

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import './AboutMe.scss';
 
-import withTitle from '../../HOCs/withTitle/withTitle';
+import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 
 const AboutMe: FC = () => {
     return (
-        <div className="column is-half is-offset-one-quarter">
+        <div>
             <div className="cricket-photo" />
             <article className="message">
                 <div className="message-body">
@@ -58,4 +58,4 @@ const AboutMe: FC = () => {
     );
 };
 
-export default withTitle('About Me', AboutMe);
+export default withCenterFormatting('About Me', AboutMe);
