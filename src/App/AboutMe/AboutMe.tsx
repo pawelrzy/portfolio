@@ -10,33 +10,31 @@ const AboutMe: FC = () => {
             <article className="message">
                 <div className="message-body">
                     <p>
-                        Hi, I'm Michael Vytlingam. I am a{' '}
-                        <b>Full Stack Developer</b> and <b>Machine Learning</b>{' '}
-                        enthusiast from Toronto, CA. I am in my second year as a
-                        mechanical engineering student at the University of
-                        Waterloo.
+                        Hi, I'm Michael Vytlingam. I am a full stack developer
+                        and machine learning enthusiast from Toronto, CA. I am
+                        in my second year as a mechanical engineering student at
+                        the University of Waterloo.
                     </p>
                     <br />
                     <p>
-                        In my personal time, I love watching cricket (Go
+                        In my personal time, I love to watch cricket (Go
                         Windies! &nbsp;
                         <span role="img" aria-label="cricket and palm tree">
                             🏏🌴
                         </span>
                         ) and enjoy playing pickup with just about any sport
                         available. I love reaching new PRs at the gym, hitting
-                        insane shots in pool, and practicing trick-shots in
+                        insane shots in pool, and practicing my trick-shots in
                         Rocket League.
                     </p>
                     <br />
                     <p>
-                        Apart from full stack, I'm particularly interested in
-                        machine learning as I want to bridge the gap between the
-                        human brain and a computer. I believe there are more
-                        important things for humans to be doing rather than say,
-                        driving for hours, reading spam emails, or handling
-                        customer support issues. Why not give these tasks to a
-                        machine?
+                        I'm particularly interested in machine learning as I
+                        want to bridge the gap between the human brain and a
+                        computer. I believe there are more important things for
+                        humans to be doing rather than say, driving for hours,
+                        reading spam emails, or handling customer support
+                        issues. Why not give these tasks to a machine?
                     </p>
                     <br />
                     <p>

@@ -6,8 +6,8 @@ import './Knowledge.scss';
 
 const Knowledge: FC = () => {
     const languages = [
-        'Python',
         'TypeScript/JavaScript',
+        'Python',
         'C++',
         'Go',
         'SQL',
@@ -43,12 +43,13 @@ const Knowledge: FC = () => {
         'Firebase',
         'PosgreSQL',
         'MongoDB',
+        'Redis',
         'MySQL',
         'CircleCI',
         'Jenkins'
     ];
     const ml = {
-        tools: ['TensorFlow', 'scikit-learn'],
+        tools: ['TensorFlow', 'scikit-learn', 'numpy', 'pandas'],
         interests: ['Object Detection', 'Pathfinding']
     };
     return (
