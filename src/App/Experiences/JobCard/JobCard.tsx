@@ -2,7 +2,15 @@ import React, { FC, useRef, useEffect } from 'react';
 import './JobCard.scss';
 
 interface JobCardProps {
-    job: any; //TODO
+    job: {
+        logo: string;
+        coverPhoto?: string;
+        company: string;
+        position: string;
+        date: string;
+        location: string;
+        body: string;
+    };
 }
 
 const JobCard: FC<JobCardProps> = (props: JobCardProps) => {

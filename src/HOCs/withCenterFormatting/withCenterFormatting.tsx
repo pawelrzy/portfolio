@@ -1,8 +1,12 @@
 import React from 'react';
 import './withCenterFormatting.scss';
 
-const withCenterFormatting = (title: string, WrappedComponent: any) => {
-    //TODO: Fix
+type ComponentType = React.ComponentClass | React.StatelessComponent;
+
+const withCenterFormatting = (
+    title: string,
+    WrappedComponent: ComponentType
+) => {
     return () => {
         return (
             <div className="column is-half is-offset-one-quarter with-title">

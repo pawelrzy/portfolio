@@ -2,7 +2,12 @@ import React, { FC } from 'react';
 import './Recommendation.scss';
 
 interface RecommendationProps {
-    recommendation: any; //TODO
+    recommendation: {
+        name: string;
+        title: string;
+        photo: string;
+        body: string;
+    };
 }
 
 const Recommendation: FC<RecommendationProps> = (

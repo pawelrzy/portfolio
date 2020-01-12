@@ -1,22 +1,24 @@
 import React, { Component, createRef } from 'react';
 import './withAnimation.scss';
 
-const withAnimation = (WrappedComponent: any) => { //TODO: Fix
+type ComponentType = React.ComponentClass | React.StatelessComponent;
+
+const withAnimation = (WrappedComponent: ComponentType) => {
     return class Animated extends Component {
         node = createRef();
         state = {
             element: document.getElementById('about-me'),
-            isVisible: false,
-        }
+            isVisible: false
+        };
 
-        componentDidMount () {
+        componentDidMount() {
             const element = this.node;
             this.setState({ element: element }, () => this.checkVisible());
             document.addEventListener('scroll', this.checkVisible);
         }
 
-        componentWillUnmount () {
-            document.removeEventListener('scroll', this.checkVisible); //TODO may cause error
+        componentWillUnmount() {
+            document.removeEventListener('scroll', this.checkVisible);
         }
 
         checkVisible = () => {
@@ -25,23 +27,26 @@ const withAnimation = (WrappedComponent: any) => { //TODO: Fix
             if (this.state.element && inViewPort) {
                 this.startFade();
             }
-        }
+        };
 
         startFade = () => {
             document.removeEventListener('scroll', this.checkVisible);
             this.setState({ isVisible: true });
             this.state.element!.classList.add('animated', 'fadeIn');
-        }
+        };
 
-        render () {
+        render() {
             const { isVisible } = this.state;
             return (
-                <div className="animated-container" ref={(n: any) => this.node = n}>
-                    {isVisible && <WrappedComponent  />}
+                <div
+                    className="animated-container"
+                    ref={(n: any) => (this.node = n)}
+                >
+                    {isVisible && <WrappedComponent />}
                 </div>
             );
         }
     };
-}
+};
 
 export default withAnimation;

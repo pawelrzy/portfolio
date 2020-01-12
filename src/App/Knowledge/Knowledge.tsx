@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
+import Tags from './Tags/Tags';
 
 import './Knowledge.scss';
 
@@ -53,16 +54,7 @@ const Knowledge: FC = () => {
             <article>
                 <div className="category">
                     <h1 className="title is-size-4">Languages</h1>
-                    <div className="tags">
-                        {languages.map((item, index) => (
-                            <span
-                                key={index}
-                                className="tag is-info is-rounded is-light"
-                            >
-                                {item}
-                            </span>
-                        ))}
-                    </div>
+                    <Tags tags={languages} />
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Front End</h1>
@@ -70,56 +62,20 @@ const Knowledge: FC = () => {
                         <h1 className="title is-size-6 sub-category-title">
                             Design
                         </h1>
-                        <div className="tags">
-                            {frontend.design.map((item, index) => (
-                                <span
-                                    key={index}
-                                    className="tag is-info is-rounded is-light"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
+                        <Tags tags={frontend.design} />
                         <h1 className="title is-size-6 sub-category-title">
                             Tools
                         </h1>
-                        <div className="tags">
-                            {frontend.tools.map((item, index) => (
-                                <span
-                                    key={index}
-                                    className="tag is-info is-rounded is-light"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
+                        <Tags tags={frontend.tools} />
                     </div>
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Back End</h1>
-                    <div className="tags">
-                        {backend.map((item, index) => (
-                            <span
-                                key={index}
-                                className="tag is-info is-rounded is-light"
-                            >
-                                {item}
-                            </span>
-                        ))}
-                    </div>
+                    <Tags tags={backend} />
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Infrastructure</h1>
-                    <div className="tags">
-                        {infrastructure.map((item, index) => (
-                            <span
-                                key={index}
-                                className="tag is-info is-rounded is-light"
-                            >
-                                {item}
-                            </span>
-                        ))}
-                    </div>
+                    <Tags tags={infrastructure} />
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Machine Learning</h1>
@@ -127,29 +83,11 @@ const Knowledge: FC = () => {
                         <h1 className="title is-size-6 sub-category-title">
                             Tools
                         </h1>
-                        <div className="tags">
-                            {ml.tools.map((item, index) => (
-                                <span
-                                    key={index}
-                                    className="tag is-info is-rounded is-light"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
+                        <Tags tags={ml.tools} />
                         <h1 className="title is-size-6 sub-category-title">
                             Specific Interests
                         </h1>
-                        <div className="tags">
-                            {ml.interests.map((item, index) => (
-                                <span
-                                    key={index}
-                                    className="tag is-info is-rounded is-light"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
+                        <Tags tags={ml.interests} />
                     </div>
                 </div>
             </article>
