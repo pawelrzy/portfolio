@@ -1,10 +1,16 @@
 @import '../../styles/breakpoints.scss';
+@import '../../styles/styles.scss';
 
 .navbar {
     padding: 0.5rem;
     @include desktop-up {
         padding: 1rem;
     }
+}
+
+.drop-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.096);
+    transition: box-shadow 0.1s ease-in-out;
 }
 
 .logo-container {

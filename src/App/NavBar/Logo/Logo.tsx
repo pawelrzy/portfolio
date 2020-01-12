@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './AnimatedLogo.scss'
+import './Logo.scss';
 
 import AnimatedName from './AnimatedName/AnimatedName';
 
 interface AnimatedLogoProps {
-    update: boolean
+    update: boolean;
 }
 
-class AnimatedLogo extends Component<AnimatedLogoProps> {
-    render () {
+class Logo extends Component<AnimatedLogoProps> {
+    render() {
         const isDesktop = window.innerWidth > 1024;
         return (
             <div className="logo-container columns">
@@ -21,4 +21,4 @@ class AnimatedLogo extends Component<AnimatedLogoProps> {
     }
 }
 
-export default AnimatedLogo;
+export default Logo;

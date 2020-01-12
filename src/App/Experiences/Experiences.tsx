@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import './Experience.scss';
+import './Experiences.scss';
 
 import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 import JobCard from './JobCard/JobCard';
 
-const Experience: FC = () => {
+const Experiences: FC = () => {
     const jobs = [
         {
             logo: 'uw.jpg',
@@ -103,4 +103,4 @@ const Experience: FC = () => {
     );
 };
 
-export default withCenterFormatting('Experiences', Experience);
+export default withCenterFormatting('Experiences', Experiences);

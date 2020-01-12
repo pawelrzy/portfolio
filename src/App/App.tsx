@@ -7,19 +7,41 @@ import NavBar from './NavBar/NavBar';
 import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
-import Experience from './Experience/Experience';
+import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
+import Recommendations from './Recommendations/Recommendations';
 
 interface AppState {
     hasScrolled: boolean;
 }
 
 class App extends Component<{}, AppState> {
+    state: AppState = {
+        hasScrolled: false
+    };
+
+    componentDidMount() {
+        document.addEventListener('scroll', this.checkScroll);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.checkScroll);
+    }
+
+    checkScroll = () => {
+        if (window.scrollY > 0 && !this.state.hasScrolled) {
+            this.setState({ hasScrolled: true });
+        } else if (window.scrollY === 0 && this.state.hasScrolled) {
+            this.setState({ hasScrolled: false });
+        }
+    };
+
     render() {
+        const { hasScrolled } = this.state;
         return (
             <Fragment>
-                <NavBar />
+                <NavBar hasScrolled={hasScrolled} />
                 <Element id="splash" name="splash">
                     <Splash />
                 </Element>
@@ -32,6 +54,7 @@ class App extends Component<{}, AppState> {
                 <Element id="experience" name="experience">
                     <Experience />
                 </Element>
+                <Recommendations />
                 <Element id="contact-me" name="contact-me">
                     <ContactMe />
                 </Element>

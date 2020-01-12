@@ -39,14 +39,10 @@ const Knowledge: FC = () => {
     ];
     const infrastructure = [
         'Docker',
-        'AWS',
         'Firebase',
         'PosgreSQL',
-        'MongoDB',
-        'Redis',
         'MySQL',
-        'CircleCI',
-        'Jenkins'
+        'CircleCI'
     ];
     const ml = {
         tools: ['TensorFlow', 'scikit-learn', 'numpy', 'pandas'],

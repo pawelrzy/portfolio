@@ -1,16 +1,22 @@
 import React, { FC, Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
-import AnimatedLogo from './AnimatedLogo/AnimatedLogo';
+import Logo from './Logo/Logo';
 import NavItems from './NavItems/NavItems';
 
 import './NavBar.scss';
 
-const NavBar: FC = () => {
+interface NavBarProps {
+    hasScrolled: boolean;
+}
+
+const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
     const [menuToggled, setMenuToggled] = useState(false);
     const [update, causeUpdate] = useState(false);
+    const { hasScrolled } = props;
+
     const isMobile = window.innerWidth < 1024;
-    
+
     useEffect(function setupListener() {
         function handleResize() {
             causeUpdate(!update);
@@ -37,14 +43,15 @@ const NavBar: FC = () => {
 
     return (
         <nav
-            className="navbar is-fixed-top animated fadeIn"
+            className={`navbar is-fixed-top animated fadeIn ${hasScrolled &&
+                'drop-shadow'}`} // hasScrolled && drop-shadow
             role="navigation"
             aria-label="main navigation"
         >
             <div className="container">
                 <div className="navbar-brand logo-container">
                     <Link to="splash" smooth>
-                        <AnimatedLogo update={update} />
+                        <Logo update={update} />
                     </Link>
                     {isMobile && ( // eslint-disable-next-line jsx-a11y/anchor-is-valid
                         <a

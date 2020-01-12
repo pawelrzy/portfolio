@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
-import Testimonial from './Testimonial/Testimonial';
+import Recommendation from './Recommendation/Recommendation';
 
-const testimonials = [
+const recommendations = [
     {
         name: 'Renata Vaccaro',
         title: 'CTO at engineering.com & Co-founder of ProjectBoard',
@@ -52,7 +52,7 @@ const testimonials = [
     }
 ];
 
-class Testimonials extends Component {
+class Recommendations extends Component {
     state = {
         index: 0,
         timer: 0
@@ -69,7 +69,7 @@ class Testimonials extends Component {
 
     togglePosition = () => {
         const index =
-            this.state.index < testimonials.length - 1
+            this.state.index < recommendations.length - 1
                 ? this.state.index + 1
                 : 0;
         const element = document.querySelector('.testimonial');
@@ -84,8 +84,8 @@ class Testimonials extends Component {
 
     render() {
         const { index } = this.state;
-        return <Testimonial testimonial={testimonials[index]} />;
+        return <Recommendation recommendation={recommendations[index]} />;
     }
 }
 
-export default withCenterFormatting('Recommendations', Testimonials);
+export default withCenterFormatting('Recommendations', Recommendations);
