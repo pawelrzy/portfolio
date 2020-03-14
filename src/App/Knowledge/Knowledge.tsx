@@ -7,48 +7,54 @@ import './Knowledge.scss';
 
 const Knowledge: FC = () => {
     const languages = [
-        'TypeScript/JavaScript',
+        'TypeScript',
+        'JavaScript',
         'Python',
-        'C++',
+        'C#',
+        'Java',
         'Go',
         'SQL',
-        'Bash'
+        'MATLAB',
+        'HTML5',
+        'Sass'
     ];
-    const frontend = {
-        design: ['Figma', 'Adobe Illustrator', 'Photoshop', 'After Effects'],
-        tools: [
-            'React',
-            'Redux',
-            'Vue',
-            'Vuex',
-            'Sass',
-            'JEST',
-            'Enzyme',
-            'Webpack',
-            'Babel',
-            'Bulma',
-            'Semantic UI',
-            'Lottie'
-        ]
-    };
-    const backend = [
-        'Node',
+    const frontend = [
+        'React',
+        'Redux',
+        'Vue',
+        'Electron',
+        'JEST',
+        'Enzyme',
+        'Webpack',
+        'Babel',
+        'Bulma',
+        'Lottie',
+        'Figma',
+        'Gatsby',
+        'Apollo GraphQL',
+        'Semantic UI',
+        'Adobe Illustrator',
+        'Adobe Photoshop',
+        'Adobe After Effects'
+    ];
+    const backendAndInfrastructure = [
         'Express',
-        'ElasticSearch',
-        'Django',
-        'Apollo GraphQL'
-    ];
-    const infrastructure = [
-        'Docker',
+        '.NET Core',
+        'AWS S3',
         'Firebase',
-        'PosgreSQL',
-        'MySQL',
-        'CircleCI'
+        'Docker',
+        'Azure DevOps (Pipelines)',
+        'CircleCI',
+        'AWS EC2'
     ];
-    const ml = {
-        tools: ['TensorFlow', 'scikit-learn', 'numpy', 'pandas'],
-        interests: ['Object Detection', 'Pathfinding']
-    };
+    const data = [
+        'PostgreSQL',
+        'MongoDB',
+        'TensorFlow',
+        'YOLO',
+        'Elasticsearch',
+        'Microsoft Cognitive Services (LUIS)'
+    ];
     return (
         <div className="knowledge">
             <article>
@@ -58,37 +64,17 @@ const Knowledge: FC = () => {
                 </div>
                 <div className="category">
                     <h1 className="title is-size-4">Front End</h1>
-                    <div>
-                        <h1 className="title is-size-6 sub-category-title">
-                            Design
-                        </h1>
-                        <Tags tags={frontend.design} />
-                        <h1 className="title is-size-6 sub-category-title">
-                            Tools
-                        </h1>
-                        <Tags tags={frontend.tools} />
-                    </div>
+                    <Tags tags={frontend} />
                 </div>
                 <div className="category">
-                    <h1 className="title is-size-4">Back End</h1>
-                    <Tags tags={backend} />
+                    <h1 className="title is-size-4">
+                        Back End + Infrastructure
+                    </h1>
+                    <Tags tags={backendAndInfrastructure} />
                 </div>
                 <div className="category">
-                    <h1 className="title is-size-4">Infrastructure</h1>
-                    <Tags tags={infrastructure} />
-                </div>
-                <div className="category">
-                    <h1 className="title is-size-4">Machine Learning</h1>
-                    <div>
-                        <h1 className="title is-size-6 sub-category-title">
-                            Tools
-                        </h1>
-                        <Tags tags={ml.tools} />
-                        <h1 className="title is-size-6 sub-category-title">
-                            Specific Interests
-                        </h1>
-                        <Tags tags={ml.interests} />
-                    </div>
+                    <h1 className="title is-size-4">Data</h1>
+                    <Tags tags={data} />
                 </div>
             </article>
         </div>

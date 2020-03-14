@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 // import ResumePath from '../../assets/resume.pdf';
 
-import './Footer.scss'
+import './Footer.scss';
 
 const Footer: FC = () => {
     return (
@@ -12,16 +12,28 @@ const Footer: FC = () => {
                 <div className="column">
                     <div className="columns">
                         <div className="social-media-links column">
-                            <a href="https://github.com/mikevyt/" rel="Github Profile">
+                            <a
+                                href="https://github.com/mikevyt/"
+                                rel="Github Profile"
+                            >
                                 <i className="fab fa-github social-icon"></i>
                             </a>
-                            <a href="https://medium.com/@michael.vytlingam" rel="Medium Profile">
+                            <a
+                                href="https://medium.com/@michael.vytlingam"
+                                rel="Medium Profile"
+                            >
                                 <i className="fab fa-medium social-icon"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/mikevyt/" rel="LinkedIn Profile">
+                            <a
+                                href="https://www.linkedin.com/in/mikevyt/"
+                                rel="LinkedIn Profile"
+                            >
                                 <i className="fab fa-linkedin social-icon"></i>
                             </a>
-                            <a href="https://www.kaggle.com/mikevyt" rel="Kaggle Profile">
+                            <a
+                                href="https://www.kaggle.com/mikevyt"
+                                rel="Kaggle Profile"
+                            >
                                 <i className="fab fa-kaggle social-icon"></i>
                             </a>
                         </div>
@@ -31,14 +43,11 @@ const Footer: FC = () => {
                             </a>
                         </div> */}
                     </div>
-                    <p>© 2019 Michael Vytlingam. All Rights Reserved.</p>
+                    <p>© 2020 Michael Vytlingam. All Rights Reserved.</p>
                 </div>
                 {/* <div className="is-divider-vertical"></div> */}
                 <div className="column footer-right">
-                    <Link
-                        to="splash"
-                        smooth
-                    >
+                    <Link to="splash" smooth>
                         <i className="fas fa-arrow-up"></i>
                     </Link>
                 </div>

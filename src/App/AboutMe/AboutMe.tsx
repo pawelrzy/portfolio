@@ -12,7 +12,7 @@ const AboutMe: FC = () => {
                     <p>
                         Hi, I'm Michael Vytlingam. I am a full stack developer
                         and machine learning enthusiast from Toronto, CA. I am
-                        in my second year as a mechanical engineering student at
+                        in my third year as a mechanical engineering student at
                         the University of Waterloo.
                     </p>
                     <br />

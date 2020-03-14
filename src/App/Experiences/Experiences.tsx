@@ -82,9 +82,10 @@ const Experiences: FC = () => {
         },
         {
             logo: 'mvgd.jpg',
+            coverPhoto: 'kendo.jpg',
             company: 'MVGD',
             position: 'Freelance Graphic Designer',
-            date: 'Dec 2015 - Sept 2018',
+            date: 'Dec 2015 - Sept 2018', // TODO: Add links to websites
             location: 'Remote',
             body: `
                 I created logos, banners, documents, and websites for 
