@@ -7,7 +7,7 @@ const recommendations = [
     {
         name: 'Renata Vaccaro',
         title: 'CTO at engineering.com & Co-founder of ProjectBoard',
-        photo: 'renata.jpeg',
+        photo: 'renata.jpg',
         body: `
                 Michael was hired to work as a Developer and Community Manager. He not 
                 only exceeded our expectations in these roles, but took on responsibilities 
@@ -31,7 +31,7 @@ const recommendations = [
     {
         name: 'Warren K.P. Lamb',
         title: 'Blockchain Engineer at Grain Discovery',
-        photo: 'warren.jpeg',
+        photo: 'warren.jpg',
         body: `
                 Michael was an exceptional employee during his time at Grain Discovery. 
                 He performed all tasks effectively and consistently went above and beyond 
@@ -43,7 +43,7 @@ const recommendations = [
     {
         name: 'Patrick McCormack',
         title: 'Event Producer at FITC',
-        photo: 'patrick.jpeg',
+        photo: 'patrick.jpg',
         body: `
                 Friendly, professional, and comfortable under pressure - Michael 
                 was an exemplary worker in every way. He's welcome to work with 

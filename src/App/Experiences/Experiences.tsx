@@ -7,6 +7,22 @@ import JobCard from './JobCard/JobCard';
 const Experiences: FC = () => {
     const jobs = [
         {
+            logo: 'cryptonumerics.jpg',
+            company: 'CryptoNumerics',
+            position: 'Full Stack Engineering Intern',
+            date: 'January 2020 - Present',
+            location: 'Toronto, ON',
+            body: `
+                I'm currently building and shipping new features to our CN-Protect
+                application; a tool for dataset de-identification. I'm also building a 
+                new reporting tool to be used across all of our products in order to keep the
+                user informed of the changes to their data.
+                <br/>
+                <br/>
+                <b>Tech:</b> Java, Electron, React, Redux, JEST
+            `
+        },
+        {
             logo: 'uw.jpg',
             company: 'University of Waterloo',
             position: 'Machine Learning Researcher',
