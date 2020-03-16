@@ -10,7 +10,7 @@ import Knowledge from './Knowledge/Knowledge';
 import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
-import Recommendations from './Recommendations/Recommendations';
+// import Recommendations from './Recommendations/Recommendations';
 
 interface AppState {
     hasScrolled: boolean;
@@ -45,17 +45,29 @@ class App extends Component<{}, AppState> {
                 <Element id="splash" name="splash">
                     <Splash />
                 </Element>
-                <Element id="about-me" name="about-me">
+                <Element id="about-me" name="about-me" className="body-section">
                     <AboutMe />
                 </Element>
-                <Element id="knowledge" name="knowledge">
+                <Element
+                    id="knowledge"
+                    name="knowledge"
+                    className="body-section"
+                >
                     <Knowledge />
                 </Element>
-                <Element id="experience" name="experience">
+                <Element
+                    id="experience"
+                    name="experience"
+                    className="body-section"
+                >
                     <Experience />
                 </Element>
-                <Recommendations />
-                <Element id="contact-me" name="contact-me">
+                {/* <Recommendations /> */}
+                <Element
+                    id="contact-me"
+                    name="contact-me"
+                    className="body-section"
+                >
                     <ContactMe />
                 </Element>
                 <Footer />

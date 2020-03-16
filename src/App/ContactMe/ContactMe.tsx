@@ -65,7 +65,4 @@ const ContactMe: FC = () => {
     );
 };
 
-export default withCenterFormatting(
-    "Let's Grab Coffee Sometime ☕️",
-    ContactMe
-);
+export default withCenterFormatting('Contact Me', ContactMe);

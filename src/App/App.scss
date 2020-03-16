@@ -6,6 +6,15 @@ html {
     }
 }
 
+.body-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    @include desktop-up {
+        min-height: 100vh;
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+}
 #knowledge {
     background-image: url('../assets/knowledge-pattern.png');
     background-repeat: repeat;
