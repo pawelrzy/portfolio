@@ -1,59 +1,62 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import './AboutMe.scss';
 
-import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
-
 const AboutMe: FC = () => {
+    const isMobile = window.innerWidth < 1024;
+    const [update, causeUpdate] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            causeUpdate(!update);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    });
+
     return (
-        <div>
-            <div className="cricket-photo" />
-            <article className="message">
-                <div className="message-body">
-                    <p>
-                        Hi, I'm Michael Vytlingam. I am a full stack developer
-                        and machine learning enthusiast from Toronto, CA. I am
-                        in my third year as a mechanical engineering student at
-                        the University of Waterloo.
-                    </p>
-                    <br />
-                    <p>
-                        In my personal time, I love to watch cricket (Go
-                        Windies! &nbsp;
-                        <span role="img" aria-label="cricket and palm tree">
-                            🏏🌴
-                        </span>
-                        ) and enjoy playing pickup with just about any sport
-                        available. I love reaching new PRs at the gym, hitting
-                        insane shots in pool, and practicing my trick-shots in
-                        Rocket League.
-                    </p>
-                    <br />
-                    <p>
-                        I'm particularly interested in machine learning as I
-                        want to bridge the gap between the human brain and a
-                        computer. I believe there are more important things for
-                        humans to be doing rather than say, driving for hours,
-                        reading spam emails, or handling customer support
-                        issues. Why not give these tasks to a machine?
-                    </p>
-                    <br />
-                    <p>
-                        Below are my projects and experience. Let me know what
-                        you think!
-                    </p>
-                    <br />
-                    <div className="sign-off">
-                        <img
-                            src={require(`../../assets/signature.png`)}
-                            alt="signature"
-                            className="signature"
-                        />
-                        <p>Michael Vytlingam</p>
-                    </div>
+        <div className="about-me container">
+            <div className="about-me-photos">
+                <div className="selfie" />
+                {!isMobile && <div className="cricket-photo" />}
+            </div>
+
+            <div className="about-me-text">
+                <p>
+                    I'm a software engineering intern passionate towards{' '}
+                    <b>full stack development</b> and{' '}
+                    <b>natural language processing</b>. I'm currently a Full
+                    Stack Developer Intern @{' '}
+                    <a href="https://cryptonumerics.com/">CryptoNumerics</a> and
+                    a third year Mechanical Engineering student @{' '}
+                    <a href="https://uwaterloo.ca/">UWaterloo</a>.
+                </p>
+                <br />
+                <p>
+                    I'm a lover of cars, planes, cricket, and basketball. I
+                    enjoy lifting weights, playing Werewolf with friends,
+                    experimenting with new ideas and learning as much as I can
+                    along the way.
+                </p>
+                <br />
+                <p>Below are my projects and experience.</p>
+                <br />
+                <p>Stay safe out there.</p>
+                <br />
+                <div className="sign-off">
+                    <img
+                        src={require(`../../assets/signature.png`)}
+                        alt="signature"
+                        className="signature"
+                    />
+                    <p>Michael Vytlingam</p>
                 </div>
-            </article>
+            </div>
         </div>
     );
 };
 
-export default withCenterFormatting('About Me', AboutMe);
+export default AboutMe;

@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import './AnimatedName.scss';
 
@@ -9,9 +8,9 @@ class AnimatedName extends Component {
         position: 0,
         timer: 0,
     };
-    
+
     componentDidMount() {
-        const timer = setInterval(this.togglePosition, 4000);
+        const timer = setInterval(this.togglePosition, 6000);
         this.setState({ timer: timer });
     }
 
@@ -21,7 +20,7 @@ class AnimatedName extends Component {
 
     togglePosition = () => {
         const position = this.state.position ? 0 : 1;
-        const element =  document.querySelector('.position-text');
+        const element = document.querySelector('.position-text');
         if (element) {
             element.classList.remove('fadeIn');
             setTimeout(() => {
@@ -29,16 +28,14 @@ class AnimatedName extends Component {
                 element.classList.add('fadeIn');
             }, 100);
         }
-    }
+    };
 
-    render () {
+    render() {
         const { position } = this.state;
 
         return (
             <div>
-                <div className="name-text">
-                    Michael Vytlingam
-                </div>
+                <div className="name-text">Michael Vytlingam</div>
                 <div className="position-text animated">
                     {POSITIONS[position]}
                 </div>

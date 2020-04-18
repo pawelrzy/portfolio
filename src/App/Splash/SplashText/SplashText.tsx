@@ -13,18 +13,17 @@ const SplashText: FC = () => {
                 </span>
             </h1>
             <h2 className="subtitle">
-                I like to build beautiful things for wonderful people.
+                I like to build beautiful and smart things for wonderful people.
                 <br />
-                I’m currently looking for internships for the Summer/Fall 2020
-                seasons.
+                I’m currently looking for internships for the Fall 2020 season.
             </h2>
             <a
                 href={ResumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button is-text"
+                className="button is-info"
             >
-                Have a look at my resume here.
+                Check out my resume here
             </a>
         </div>
     );

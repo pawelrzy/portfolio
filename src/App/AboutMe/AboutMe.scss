@@ -1,10 +1,25 @@
+@import '../../styles/breakpoints.scss';
+
+.about-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include desktop-up {
+        flex-direction: row;
+    }
+}
+
+.about-me-text {
+    margin-left: 4rem;
+}
+
 .cricket-photo {
     background-image: url('../../assets/cricket.gif');
     background-position: 50% 62%;
     background-size: cover;
-    height: 20rem;
+    height: 15rem;
     border-radius: 1rem;
-    margin-bottom: 1rem;
+    margin: 2rem;
 }
 
 .sign-off {
@@ -13,4 +28,17 @@
 
 .signature {
     height: 3rem;
+}
+
+.selfie {
+    min-width: 25rem;
+    height: 25rem;
+    margin: 2rem;
+
+    background-image: url('../../assets/aboutme-selfie.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(90%);
+
+    border-radius: 1rem;
 }
