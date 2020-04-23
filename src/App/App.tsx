@@ -7,6 +7,7 @@ import NavBar from './NavBar/NavBar';
 import Splash from './Splash/Splash';
 import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
+import Projects from './Projects/Projects';
 import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
@@ -18,7 +19,7 @@ interface AppState {
 
 class App extends Component<{}, AppState> {
     state: AppState = {
-        hasScrolled: false
+        hasScrolled: false,
     };
 
     componentDidMount() {
@@ -54,6 +55,9 @@ class App extends Component<{}, AppState> {
                     className="body-section"
                 >
                     <Knowledge />
+                </Element>
+                <Element id="projects" name="projects" className="body-section">
+                    <Projects />
                 </Element>
                 <Element
                     id="experience"

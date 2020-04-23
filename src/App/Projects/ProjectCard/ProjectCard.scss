@@ -6,24 +6,17 @@
     height: 20rem;
 }
 
-.job-card {
+.project-card {
     margin: 2rem 2rem;
     @include desktop-up {
         width: 45%;
     }
 }
 
-.company-logo {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.5rem;
-}
-
-.company-name {
+.project-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1rem;
 }
 
 .title-row {

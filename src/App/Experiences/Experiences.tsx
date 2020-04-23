@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import './Experiences.scss';
 
-import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 import JobCard from './JobCard/JobCard';
 
 const Experiences: FC = () => {
@@ -20,7 +19,7 @@ const Experiences: FC = () => {
                 <br/>
                 <br/>
                 <b>Tech:</b> Java, Electron, React, Redux, JEST
-            `
+            `,
         },
         {
             logo: 'uw.jpg',
@@ -36,7 +35,7 @@ const Experiences: FC = () => {
                 <br/>
                 <br/>
                 <b>Tech:</b> Darknet, YOLO, TensorFlow
-            `
+            `,
         },
         {
             logo: 'gd.jpg',
@@ -60,7 +59,7 @@ const Experiences: FC = () => {
                 <b>Tech:</b> React, Redux, Express, DeckGL, Webpack, Babel, 
                 Hyperledger Fabric (TypeScript), Bash, Docker, Semantic UI, 
                 Lottie, Figma, JEST, Enzyme
-            `
+            `,
         },
         {
             logo: 'engineering.jpg',
@@ -77,7 +76,7 @@ const Experiences: FC = () => {
                 <br/>
                 <br/>
                 <b>Tech:</b> Vue, Vuex, Sass, Fabric.js, Go, MySQL, TestCafe
-            `
+            `,
         },
         {
             logo: 'snyder.jpg',
@@ -94,7 +93,7 @@ const Experiences: FC = () => {
                 <br/>
                 <b>Taught Me:</b> the importance of getting a job done quickly 
                 and effectively, how to drive massive pickup trucks. 🚚
-            `
+            `,
         },
         {
             logo: 'mvgd.jpg',
@@ -107,17 +106,20 @@ const Experiences: FC = () => {
                 I created logos, banners, documents, and websites for 
                 various clients, including the University of Toronto 
                 Kendo Club, LSPDFR.com, and Rubiar.
-            `
-        }
+            `,
+        },
     ];
 
     return (
-        <div>
-            {jobs.map((job, index) => (
-                <JobCard key={index} job={job} />
-            ))}
+        <div className="container">
+            <h1 className="title has-text-centered is-3">Experiences</h1>
+            <div className="experiences">
+                {jobs.map((job, index) => (
+                    <JobCard key={index} job={job} />
+                ))}
+            </div>
         </div>
     );
 };
 
-export default withCenterFormatting('Experiences', Experiences);
+export default Experiences;

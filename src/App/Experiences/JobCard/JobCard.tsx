@@ -26,7 +26,7 @@ const JobCard: FC<JobCardProps> = (props: JobCardProps) => {
                 <div
                     className="message-header cover-photo"
                     style={{
-                        backgroundImage: `url('${require(`../../../assets/${job.coverPhoto}`)}')`
+                        backgroundImage: `url('${require(`../../../assets/${job.coverPhoto}`)}')`,
                     }}
                 />
             )}
