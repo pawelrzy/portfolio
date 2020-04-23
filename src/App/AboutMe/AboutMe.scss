@@ -24,10 +24,13 @@
 
 .sign-off {
     margin-top: 2rem;
+    text-align: right;
 }
 
 .signature {
-    height: 3rem;
+    height: 6rem;
+    transform: rotate(6deg);
+    margin-right: 7rem;
 }
 
 .selfie {

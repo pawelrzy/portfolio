@@ -10,17 +10,16 @@ const Knowledge: FC = () => {
         {
             title: 'Languages',
             tags: [
+                'Python',
+                'Go',
                 'TypeScript',
                 'JavaScript',
-                'Python',
-                'C#',
-                'Java',
-                'Go',
+                'C++',
                 'SQL',
                 'MATLAB',
                 'HTML5',
-                'Sass'
-            ]
+                'Sass',
+            ],
         },
         {
             title: 'Front End',
@@ -41,21 +40,22 @@ const Knowledge: FC = () => {
                 'Semantic UI',
                 'Adobe Illustrator',
                 'Adobe Photoshop',
-                'Adobe After Effects'
-            ]
+                'Adobe After Effects',
+            ],
         },
         {
             title: 'Back End + Infrastructure',
             tags: [
                 'Express',
+                'Flask',
                 '.NET Core',
                 'AWS S3',
                 'Firebase',
                 'Docker',
                 'Azure DevOps (Pipelines)',
                 'CircleCI',
-                'AWS EC2'
-            ]
+                'AWS EC2',
+            ],
         },
         {
             title: 'Data',
@@ -63,17 +63,18 @@ const Knowledge: FC = () => {
                 'PostgreSQL',
                 'MongoDB',
                 'TensorFlow',
+                'Keras',
                 'YOLO',
                 'Elasticsearch',
-                'Microsoft Cognitive Services (LUIS)'
-            ]
-        }
+                'Microsoft Cognitive Services (LUIS)',
+            ],
+        },
     ];
 
     return (
         <div className="knowledge">
             <article>
-                {skills.map(skill => (
+                {skills.map((skill) => (
                     <div className="category">
                         <h1 className="title is-size-4">{skill.title}</h1>
                         <Tags tags={skill.tags} />

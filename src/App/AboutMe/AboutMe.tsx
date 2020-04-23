@@ -27,9 +27,8 @@ const AboutMe: FC = () => {
             <div className="about-me-text">
                 <p>
                     I'm a software engineering intern passionate towards{' '}
-                    <b>full stack development</b> and{' '}
-                    <b>natural language processing</b>. I'm currently a Full
-                    Stack Developer Intern @{' '}
+                    <b>full stack development</b> and <b>object detection</b>.
+                    I'm currently a Full Stack Developer Intern @{' '}
                     <a href="https://cryptonumerics.com/">CryptoNumerics</a> and
                     a third year Mechanical Engineering student @{' '}
                     <a href="https://uwaterloo.ca/">UWaterloo</a>.
@@ -52,7 +51,6 @@ const AboutMe: FC = () => {
                         alt="signature"
                         className="signature"
                     />
-                    <p>Michael Vytlingam</p>
                 </div>
             </div>
         </div>
