@@ -9,11 +9,11 @@ const Experiences: FC = () => {
             logo: 'cryptonumerics.jpg',
             company: 'CryptoNumerics',
             position: 'Full Stack Engineering Intern',
-            date: 'January 2020 - Present',
+            date: 'January 2020 - April 2020',
             location: 'Toronto, ON',
             body: `
-                I'm currently building and shipping new features to our CN-Protect
-                application; a tool for dataset de-identification. I'm also building a 
+                I built and shipped new features to our CN-Protect
+                application; a tool for dataset de-identification. I also built a 
                 new reporting tool to be used across all of our products in order to keep the
                 user informed of the changes to their data.
                 <br/>
