@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import './AboutMe.scss';
 
 const AboutMe: FC = () => {
-    const isMobile = window.innerWidth < 1024;
+    // const isMobile = window.innerWidth < 1024;
     const [update, causeUpdate] = useState(false);
 
     useEffect(() => {
@@ -21,15 +21,18 @@ const AboutMe: FC = () => {
         <div className="about-me container">
             <div className="about-me-photos">
                 <div className="selfie" />
-                {!isMobile && <div className="cricket-photo" />}
+                {/* {!isMobile && <div className="cricket-photo" />} */}
             </div>
 
             <div className="about-me-text">
                 <p>
-                    I'm currently a Machine Learning Intern @{' '}
-                    BlackBerry and
-                    a third year Mechanical Engineering student @{' '}
-                    <a href="https://uwaterloo.ca/">UWaterloo</a>.
+                    I'm an incoming <mark>Software Engineering Intern @{' '}
+                    Snowflake Inc.</mark>
+                </p>
+                <br />
+                <p>
+                    I am also a third year <mark>Mechanical Engineering student @{' '}
+                    <a href="https://uwaterloo.ca/">UWaterloo</a></mark>
                 </p>
                 <br />
                 <p>
@@ -39,9 +42,7 @@ const AboutMe: FC = () => {
                     along the way.
                 </p>
                 <br />
-                <p>Below are my projects and experience.</p>
-                <br />
-                <p>Stay safe out there.</p>
+                <p>Below are my projects and experiences, let me know what you think!</p>
                 <br />
                 <div className="sign-off">
                     <img

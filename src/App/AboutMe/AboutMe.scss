@@ -13,6 +13,18 @@
     margin-left: 4rem;
 }
 
+.about-me-text mark {
+    background-color: #eef6fc;
+    padding: 5px;
+    border-radius: 20px;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.about-me-text mark:hover {
+    background-color: #cde9ff;
+}
+
 .cricket-photo {
     background-image: url('../../assets/cricket.gif');
     background-position: 50% 62%;
@@ -24,11 +36,11 @@
 
 .sign-off {
     margin-top: 2rem;
-    text-align: right;
+    text-align: left;
 }
 
 .signature {
-    height: 6rem;
+    height: 4rem;
     transform: rotate(6deg);
     margin-right: 7rem;
 }
@@ -39,9 +51,9 @@
     margin: 2rem;
 
     background-image: url('../../assets/aboutme-selfie.jpg');
-    background-position: center;
+    background-position: 10% 0%;
     background-size: cover;
-    filter: brightness(90%);
+    // filter: brightness(90%);
 
     border-radius: 1rem;
 }
