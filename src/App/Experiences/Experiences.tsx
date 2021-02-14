@@ -6,6 +6,22 @@ import JobCard from './JobCard/JobCard';
 const Experiences: FC = () => {
     const jobs = [
         {
+            logo: 'bb.png',
+            company: 'BlackBerry',
+            position: 'Machine Learning Engineering Student',
+            date: 'September 2020 - December 2020',
+            location: 'Ottawa, ON (Remote)',
+            body: `
+                I improved my team's existing NLP-based open source license 
+                detection pipeline, used to automate open source compliance.
+                I reduced downloading and file crawling time by 70% after introducing multithreading and
+                multiprocessing.
+                <br/>
+                <br/>
+                <b>Tech:</b> Python, Pytorch, Jenkins
+            `,
+        },
+        {
             logo: 'cryptonumerics.jpg',
             company: 'CryptoNumerics',
             position: 'Full Stack Engineering Intern',
