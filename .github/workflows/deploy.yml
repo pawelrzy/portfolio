@@ -15,3 +15,5 @@ jobs:
               run: 'npm install'
             - name: 'npm run predeploy'
               run: 'npm run predeploy'
+            - name: 'npm run deploy'
+              run: 'npm run deploy'
