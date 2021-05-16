@@ -12,8 +12,7 @@ jobs:
               with:
                 node-version: '14'
             - name: 'set git identity'
-              run: 'git config user.email "michael.vytlingam@gmail.com"'
-              run: 'git config user.name "Michael Vytlingam"'
+              run: 'git config user.email "michael.vytlingam@gmail.com" && git config user.name "Michael Vytlingam"'
             - name: 'npm install'
               run: 'npm install'
             - name: 'npm run predeploy'
