@@ -6,6 +6,16 @@ import JobCard from './JobCard/JobCard';
 const Experiences: FC = () => {
     const jobs = [
         {
+            logo: 'snowflake.png',
+            company: 'Snowflake',
+            position: 'Software Engineering Intern',
+            date: 'May 2021 - Present',
+            location: 'San Mateo, CA (Remote)',
+            body: `
+                Snowsight Team
+            `,
+        },
+        {
             logo: 'bb.png',
             company: 'BlackBerry',
             position: 'Machine Learning Engineering Student',
