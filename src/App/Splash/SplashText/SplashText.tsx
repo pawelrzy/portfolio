@@ -15,7 +15,7 @@ const SplashText: FC = () => {
             <h2 className="subtitle">
                 I like to build beautiful and smart things for wonderful people.
                 <br />
-                I’m currently looking for internships for the Fall 2021 and/or Winter 2022 seasons.
+                I’m currently looking for new-grad opportunities for the Summer 2022 season.
             </h2>
             <a
                 href={ResumePath}

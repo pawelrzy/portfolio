@@ -11,7 +11,6 @@ import Projects from './Projects/Projects';
 import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
-// import Recommendations from './Recommendations/Recommendations';
 
 interface AppState {
     hasScrolled: boolean;
@@ -56,9 +55,6 @@ class App extends Component<{}, AppState> {
                 >
                     <Knowledge />
                 </Element>
-                <Element id="projects" name="projects" className="body-section">
-                    <Projects />
-                </Element>
                 <Element
                     id="experience"
                     name="experience"
@@ -66,7 +62,9 @@ class App extends Component<{}, AppState> {
                 >
                     <Experience />
                 </Element>
-                {/* <Recommendations /> */}
+                <Element id="projects" name="projects" className="body-section">
+                    <Projects />
+                </Element>
                 <Element
                     id="contact-me"
                     name="contact-me"

@@ -12,7 +12,10 @@ const Experiences: FC = () => {
             date: 'May 2021 - Present',
             location: 'San Mateo, CA (Remote)',
             body: `
-                Snowsight Team
+                Building out captivating customer experiences on the Snowflake Data Marketplace product.
+                <br/>
+                <br/>
+                <b>Tech:</b> TypeScript, React (with hooks), Express, JEST
             `,
         },
         {

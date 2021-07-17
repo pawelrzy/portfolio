@@ -26,13 +26,12 @@ const AboutMe: FC = () => {
 
             <div className="about-me-text">
                 <p>
-                    I'm a <mark>Software Engineering Intern @{' '}
-                    Snowflake Inc.</mark>
+                    I'm a <mark>Software Engineering Intern @ Snowflake</mark>
                 </p>
                 <br />
                 <p>
                     I am also a fourth year <mark>Mechanical Engineering student @{' '}
-                    <a href="https://uwaterloo.ca/">UWaterloo</a></mark>
+                        <a href="https://uwaterloo.ca/">UWaterloo</a></mark>
                 </p>
                 <br />
                 <p>

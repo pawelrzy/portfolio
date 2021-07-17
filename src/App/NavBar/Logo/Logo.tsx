@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Logo.scss';
 
-import AnimatedName from './AnimatedName/AnimatedName';
+import Name from './Name/Name';
 
 interface LogoProps {
     update: boolean;
@@ -15,7 +15,7 @@ class Logo extends Component<LogoProps> {
                 <div className="column">
                     <div className="logo" />
                 </div>
-                {isDesktop && <AnimatedName />}
+                {isDesktop && <Name />}
             </div>
         );
     }

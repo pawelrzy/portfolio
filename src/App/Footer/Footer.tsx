@@ -43,7 +43,7 @@ const Footer: FC = () => {
                             </a>
                         </div> */}
                     </div>
-                    <p>© 2020 Michael Vytlingam. All Rights Reserved.</p>
+                    <p>© 2021 Michael Vytlingam. All Rights Reserved.</p>
                 </div>
                 {/* <div className="is-divider-vertical"></div> */}
                 <div className="column footer-right">
