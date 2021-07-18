@@ -19,7 +19,10 @@ html {
     background-image: url('../assets/knowledge-pattern.png');
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 20%;
+    background-size: 60%;
+    @include desktop-up {
+        background-size: 20%;
+    }
     background-position: center;
 }
 
@@ -27,6 +30,9 @@ html {
     background-image: url('../assets/contact-pattern.png');
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 12.5%;
+    background-size: 50%;
+    @include desktop-up {
+        background-size: 12.5%;
+    }
     background-position: center;
 }
