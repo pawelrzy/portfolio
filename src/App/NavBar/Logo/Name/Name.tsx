@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Name.scss';
-
-const POSITIONS = ['Full Stack Developer', 'Machine Learning Enthusiast'];
 
 const Name = () => (
     <div>

@@ -14,11 +14,11 @@ const NavItems: FC = () => {
             <ScrollLink to="knowledge" smooth className="navbar-item">
                 Knowledge
             </ScrollLink>
-            <ScrollLink to="projects" smooth className="navbar-item">
-                Projects
-            </ScrollLink>
             <ScrollLink to="experience" smooth className="navbar-item">
                 Experience
+            </ScrollLink>
+            <ScrollLink to="projects" smooth className="navbar-item">
+                Projects
             </ScrollLink>
             <ScrollLink
                 to="contact-me"

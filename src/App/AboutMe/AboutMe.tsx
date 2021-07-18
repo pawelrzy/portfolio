@@ -21,17 +21,16 @@ const AboutMe: FC = () => {
         <div className="about-me container">
             <div className="about-me-photos">
                 <div className="selfie" />
-                {/* {!isMobile && <div className="cricket-photo" />} */}
             </div>
 
             <div className="about-me-text">
                 <p>
-                    I'm a <mark>Software Engineering Intern @ Snowflake</mark>
+                    I'm a <mark>Software Engineering Intern @ <a href="https://www.snowflake.com/">Snowflake</a></mark>
                 </p>
                 <br />
                 <p>
-                    I am also a fourth year <mark>Mechanical Engineering student @{' '}
-                        <a href="https://uwaterloo.ca/">UWaterloo</a></mark>
+                    I am also a fourth year <mark>mechanical engineering student @{' '}
+                        <a href="https://uwaterloo.ca/">the University of Waterloo</a></mark>
                 </p>
                 <br />
                 <p>
