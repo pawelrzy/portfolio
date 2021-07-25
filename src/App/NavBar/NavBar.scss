@@ -28,3 +28,37 @@
 .exit-icon {
     text-align: center;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    border-radius: 0.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    @include desktop-up {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    background-image: url('../../assets/logo.jpg');
+    background-position: center;
+    background-size: 125%;
+}
+
+.name-text {
+    color: $text;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.position-text {
+    color: $text;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}

@@ -15,18 +15,18 @@ import { NavBar } from './NavBar/NavBar';
 export const App = () => {
     const [hasScrolled, setHasScrolled] = React.useState(false);
 
-    const handleScroll = () => {
+    const handleScroll = React.useCallback(() => {
         if (window.scrollY > 0 && !hasScrolled) {
             setHasScrolled(true);
         } else if (window.scrollY === 0 && hasScrolled) {
             setHasScrolled(false);
         }
-    }
+    }, [hasScrolled]);
 
     React.useEffect(() => {
         document.addEventListener('scroll', handleScroll);
         return () => document.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [handleScroll]);
 
     return (
         <>

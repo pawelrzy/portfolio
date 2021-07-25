@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-import Logo from './Logo/Logo';
 import NavItems from './NavItems/NavItems';
 
 import './NavBar.scss';
@@ -45,7 +44,7 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
             <div className="container">
                 <div className="navbar-brand logo-container">
                     <Link to="splash" smooth>
-                        <Logo update={update} />
+                        <Logo />
                     </Link>
                     {isMobile && (
                         <button
@@ -76,3 +75,24 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
         </nav>
     );
 };
+
+const Logo = () => {
+    const isDesktop = window.innerWidth > 1024;
+    return (
+        <div className="logo-container columns">
+            <div className="column">
+                <div className="logo" />
+            </div>
+            {isDesktop && <Name />}
+        </div>
+    );
+}
+
+const Name = () => (
+    <div>
+        <div className="name-text">Michael Vytlingam</div>
+        <div className="position-text">
+            Full Stack Developer
+        </div>
+    </div>
+);
