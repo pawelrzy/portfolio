@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './Experiences.scss';
 
 import JobCard from './JobCard/JobCard';
 
-const Experiences: FC = () => {
+export const Experiences = () => {
     const jobs = [
         {
             logo: 'snowflake.png',
@@ -151,4 +151,3 @@ const Experiences: FC = () => {
     );
 };
 
-export default Experiences;

@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
-import Tags from './Tags/Tags';
 
 import './Knowledge.scss';
 
-const Knowledge: FC = () => {
+const Knowledge = () => {
     const skills = [
         {
             title: 'Languages',
@@ -84,5 +83,19 @@ const Knowledge: FC = () => {
         </div>
     );
 };
+
+interface TagsProps {
+    tags: string[];
+}
+
+const Tags = ({ tags }: TagsProps) => (
+    <div className="tags">
+        {tags.map((tag, index) => (
+            <span key={index} className="tag is-info is-rounded is-light skill">
+                {tag}
+            </span>
+        ))}
+    </div>
+);
 
 export default withCenterFormatting('Knowledge', Knowledge);

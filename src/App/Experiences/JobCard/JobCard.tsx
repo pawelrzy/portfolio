@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect } from 'react';
+import React from 'react';
 import './JobCard.scss';
 
 interface JobCardProps {
@@ -13,13 +13,12 @@ interface JobCardProps {
     };
 }
 
-const JobCard: FC<JobCardProps> = (props: JobCardProps) => {
-    let descriptionRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
+const JobCard = ({ job }: JobCardProps) => {
+    let descriptionRef = React.useRef<HTMLDivElement>(null);
+    React.useEffect(() => {
         descriptionRef.current!.innerHTML = job.body;
     });
 
-    const { job } = props;
     return (
         <article className="message job-card">
             {job.hasOwnProperty('coverPhoto') && (
