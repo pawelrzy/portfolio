@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './Experiences.scss';
 
 import JobCard from './JobCard/JobCard';
 
-const Experiences: FC = () => {
+const Experiences = () => {
     const jobs = [
         {
             logo: 'snowflake.png',
