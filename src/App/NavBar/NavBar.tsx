@@ -47,9 +47,8 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
                     <Link to="splash" smooth>
                         <Logo update={update} />
                     </Link>
-                    {isMobile && ( // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                        <a
-                            role="button"
+                    {isMobile && (
+                        <button
                             className="navbar-burger burger"
                             aria-label="menu"
                             aria-expanded="false"
@@ -67,10 +66,9 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
                                     <i className="fas fa-times"></i>
                                 </div>
                             )}
-                        </a>
+                        </button>
                     )}
                 </div>
-
                 <div id="nav-items" className="navbar-menu" onClick={toggleNav}>
                     <NavItems />
                 </div>
