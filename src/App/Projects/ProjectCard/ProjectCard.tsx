@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect } from 'react';
+import React from 'react';
 import './ProjectCard.scss';
 
 interface ProjectCardProps {
@@ -10,13 +10,12 @@ interface ProjectCardProps {
     };
 }
 
-const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
-    let descriptionRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
+    let descriptionRef = React.useRef<HTMLDivElement>(null);
+    React.useEffect(() => {
         descriptionRef.current!.innerHTML = project.body;
     });
 
-    const { project } = props;
     return (
         <article className="message job-card">
             <div
@@ -43,5 +42,3 @@ const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
         </article>
     );
 };
-
-export default ProjectCard;

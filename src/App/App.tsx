@@ -5,12 +5,12 @@ import './App.scss';
 
 import Splash from './Splash/Splash';
 import Knowledge from './Knowledge/Knowledge';
-import Projects from './Projects/Projects';
-import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
 import { NavBar } from './NavBar/NavBar';
 import { AboutMe } from './AboutMe/AboutMe';
+import { Projects } from './Projects/Projects';
+import { Experiences } from './Experiences/Experiences';
 
 export const App = () => {
     const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -49,7 +49,7 @@ export const App = () => {
                 name="experience"
                 className="body-section"
             >
-                <Experience />
+                <Experiences />
             </Element>
             <Element id="projects" name="projects" className="body-section">
                 <Projects />

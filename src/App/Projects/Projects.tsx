@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import './Projects.scss';
 
-import ProjectCard from './ProjectCard/ProjectCard';
+import { ProjectCard } from './ProjectCard/ProjectCard';
 
-const Projects: FC = () => {
+export const Projects = () => {
     const projects = [
         {
             name: 'projectRollout',
@@ -67,4 +67,3 @@ const Projects: FC = () => {
     );
 };
 
-export default Projects;

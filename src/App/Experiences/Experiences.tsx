@@ -3,7 +3,7 @@ import './Experiences.scss';
 
 import JobCard from './JobCard/JobCard';
 
-const Experiences = () => {
+export const Experiences = () => {
     const jobs = [
         {
             logo: 'snowflake.png',
@@ -151,4 +151,3 @@ const Experiences = () => {
     );
 };
 
-export default Experiences;
