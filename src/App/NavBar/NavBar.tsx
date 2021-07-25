@@ -42,7 +42,8 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
             aria-label="main navigation"
         >
             <div className="container">
-                <div className="navbar-brand logo-container">
+                <div className={`navbar-brand logo-container animated fadeIn ${hasScrolled &&
+                    'make-visible'}`}>
                     <Link to="splash" smooth>
                         <Logo />
                     </Link>
