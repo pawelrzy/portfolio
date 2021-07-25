@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 
 import Logo from './Logo/Logo';
@@ -10,27 +10,21 @@ interface NavBarProps {
     hasScrolled: boolean;
 }
 
-const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
-    const [menuToggled, setMenuToggled] = useState(false);
-    const [update, causeUpdate] = useState(false);
-    const { hasScrolled } = props;
+export const NavBar = ({ hasScrolled }: NavBarProps) => {
+    const [menuToggled, setMenuToggled] = React.useState(false);
+    const [update, causeUpdate] = React.useState(false);
 
     const isMobile = window.innerWidth < 1024;
 
-    useEffect(function setupListener() {
-        function handleResize() {
-            causeUpdate(!update);
-        }
-        window.addEventListener('resize', handleResize);
+    const handleResize = () => causeUpdate(!update);
 
-        return function cleanupListener() {
-            window.removeEventListener('resize', handleResize);
-        };
-    });
+    React.useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    })
 
     const toggleNav = () => {
-        var nav = document.getElementById('michael');
-        if (!nav) return;
+        var nav = document.getElementById('nav-items') as HTMLElement;
         var className = nav.getAttribute('class');
         if (className === 'navbar-menu') {
             nav.className = 'navbar-menu is-active';
@@ -44,7 +38,7 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
     return (
         <nav
             className={`navbar is-fixed-top animated fadeIn ${hasScrolled &&
-                'drop-shadow'}`} // hasScrolled && drop-shadow
+                'drop-shadow'}`}
             role="navigation"
             aria-label="main navigation"
         >
@@ -62,11 +56,12 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
                             onClick={toggleNav}
                         >
                             {!menuToggled ? (
-                                <Fragment>
+                                // Burger Icon
+                                <>
                                     <span aria-hidden="true"></span>
                                     <span aria-hidden="true"></span>
                                     <span aria-hidden="true"></span>
-                                </Fragment>
+                                </>
                             ) : (
                                 <div className="exit-icon">
                                     <i className="fas fa-times"></i>
@@ -76,12 +71,10 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
                     )}
                 </div>
 
-                <div id="michael" className="navbar-menu" onClick={toggleNav}>
+                <div id="nav-items" className="navbar-menu" onClick={toggleNav}>
                     <NavItems />
                 </div>
             </div>
         </nav>
     );
 };
-
-export default NavBar;
