@@ -4,13 +4,13 @@ import { Element } from 'react-scroll';
 import './App.scss';
 
 import Splash from './Splash/Splash';
-import AboutMe from './AboutMe/AboutMe';
 import Knowledge from './Knowledge/Knowledge';
 import Projects from './Projects/Projects';
 import Experience from './Experiences/Experiences';
 import ContactMe from './ContactMe/ContactMe';
 import Footer from './Footer/Footer';
 import { NavBar } from './NavBar/NavBar';
+import { AboutMe } from './AboutMe/AboutMe';
 
 export const App = () => {
     const [hasScrolled, setHasScrolled] = React.useState(false);

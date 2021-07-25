@@ -1,15 +1,12 @@
-import React, { FC, useEffect, useState } from 'react';
+import React from 'react';
 import './AboutMe.scss';
 
-const AboutMe: FC = () => {
-    // const isMobile = window.innerWidth < 1024;
-    const [update, causeUpdate] = useState(false);
+export const AboutMe = () => {
+    const [update, causeUpdate] = React.useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            causeUpdate(!update);
-        };
+    const handleResize = () => causeUpdate(!update);
 
+    React.useEffect(() => {
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -53,5 +50,3 @@ const AboutMe: FC = () => {
         </div>
     );
 };
-
-export default AboutMe;
