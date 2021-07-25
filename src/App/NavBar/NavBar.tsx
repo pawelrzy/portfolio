@@ -42,10 +42,9 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
             aria-label="main navigation"
         >
             <div className="container">
-                <div className={`navbar-brand logo-container animated fadeIn ${hasScrolled &&
-                    'make-visible'}`}>
+                <div className="navbar-brand logo-container">
                     <Link to="splash" smooth>
-                        <Logo />
+                        <Logo hasScrolled={hasScrolled} />
                     </Link>
                     {isMobile && (
                         <button
@@ -77,13 +76,12 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
     );
 };
 
-const Logo = () => {
+const Logo = ({ hasScrolled }: { hasScrolled: boolean }) => {
     const isDesktop = window.innerWidth > 1024;
     return (
-        <div className="logo-container columns">
-            <div className="column">
-                <div className="logo" />
-            </div>
+        <div className={`logo-with-text animated fadeIn ${hasScrolled &&
+            'make-visible'}`}>
+            <div className="logo" />
             {isDesktop && <Name />}
         </div>
     );

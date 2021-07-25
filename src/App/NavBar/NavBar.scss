@@ -15,15 +15,6 @@
     transition: background-color 1s ease-in-out;
 }
 
-.make-visible {
-    display: flex !important;
-    transition: display 0.1s ease-in-out;
-}
-
-.logo-container {
-    align-items: center;
-}
-
 .navbar-burger {
     display: flex;
     align-items: center;
@@ -35,9 +26,20 @@
 }
 
 .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-with-text {
     display: none;
     align-items: center;
 }
+
+.make-visible {
+    display: flex !important;
+    transition: display 0.1s ease-in-out;
+}
+
 .logo {
     border-radius: 0.4rem;
     height: 3.5rem;
@@ -50,6 +52,7 @@
     background-image: url('../../assets/logo.jpg');
     background-position: center;
     background-size: 125%;
+    margin-right: 1rem;
 }
 
 .name-text {
