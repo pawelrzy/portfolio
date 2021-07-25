@@ -6,11 +6,11 @@ import './App.scss';
 import Splash from './Splash/Splash';
 import Knowledge from './Knowledge/Knowledge';
 import ContactMe from './ContactMe/ContactMe';
-import Footer from './Footer/Footer';
 import { NavBar } from './NavBar/NavBar';
 import { AboutMe } from './AboutMe/AboutMe';
 import { Projects } from './Projects/Projects';
 import { Experiences } from './Experiences/Experiences';
+import { Footer } from './Footer/Footer';
 
 export const App = () => {
     const [hasScrolled, setHasScrolled] = React.useState(false);
