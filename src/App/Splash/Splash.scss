@@ -45,9 +45,13 @@
 .button-row {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    @include desktop-up {
+        flex-direction: row;
+    }
 }
 
 .vertical-line {
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     align-self: stretch;
 }
