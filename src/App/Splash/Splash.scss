@@ -1,4 +1,5 @@
 @import '../../styles/breakpoints.scss';
+@import '../../styles/styles.scss';
 
 .splash {
     padding-left: 1rem;
@@ -39,4 +40,14 @@
     background-size: cover;
 
     border-radius: 1rem;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    margin: 1rem;
+    align-self: stretch;
 }

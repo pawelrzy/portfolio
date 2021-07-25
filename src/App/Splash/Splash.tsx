@@ -5,6 +5,7 @@ import ResumePath from '../../assets/resume.pdf';
 
 
 import withAnimation from '../../HOCs/withAnimation/withAnimation';
+import { SocialIcons } from '../../components/SocialIcons';
 
 const Splash = () => (
     <section className="container splash">
@@ -35,14 +36,18 @@ const SplashText = () => (
             <br />
             I’m currently looking for new-grad opportunities for the Summer 2022 season.
         </h2>
-        <a
-            href={ResumePath}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button is-info"
-        >
-            Check out my resume here
-        </a>
+        <div className="button-row">
+            <a
+                href={ResumePath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button is-info"
+            >
+                Check out my resume here
+            </a>
+            <div className="vertical-line" />
+            <SocialIcons />
+        </div>
     </div>
 );
 
