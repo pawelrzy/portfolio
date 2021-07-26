@@ -4,12 +4,10 @@ import { Link } from 'react-scroll';
 import NavItems from './NavItems/NavItems';
 
 import './NavBar.scss';
+import { ScrolledContext } from '../App';
 
-interface NavBarProps {
-    hasScrolled: boolean;
-}
-
-export const NavBar = ({ hasScrolled }: NavBarProps) => {
+export const NavBar = () => {
+    const hasScrolled = React.useContext(ScrolledContext);
     const [menuToggled, setMenuToggled] = React.useState(false);
     const [update, causeUpdate] = React.useState(false);
 

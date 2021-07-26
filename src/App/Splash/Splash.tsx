@@ -6,9 +6,16 @@ import ResumePath from '../../assets/resume.pdf';
 
 import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import { SocialIcons } from '../../components/SocialIcons';
+import { ThemeButton } from '../../components/ThemeButton';
+import { ScrolledContext } from '../App';
 
-const Splash = () => (
-    <section className="container splash">
+interface SplashProps {
+    onThemeChange: (isDarkTheme: boolean) => void;
+}
+
+const Splash = ({ onThemeChange }: SplashProps) => {
+    const hasScrolled = React.useContext(ScrolledContext);
+    return <section className="container splash">
         <div className="splash-content">
             <SplashText />
             <div className="portrait" />
@@ -20,8 +27,11 @@ const Splash = () => (
         >
             <i className="fas fa-chevron-down"></i>
         </Link>
+        {!hasScrolled && <div className="theme-button">
+            <ThemeButton onChange={onThemeChange} />
+        </div>}
     </section>
-);
+}
 
 const SplashText = () => (
     <div>
@@ -51,4 +61,4 @@ const SplashText = () => (
     </div>
 );
 
-export default withAnimation(Splash);
+export default withAnimation<SplashProps>(Splash);
