@@ -21,3 +21,20 @@ $message-body-border-width: 0;
 @import '../../node_modules/bulma/sass/components/navbar.sass';
 @import '../../node_modules/bulma/sass/layout/_all.sass';
 @import '../../node_modules/bulma-divider/dist/css/bulma-divider.sass';
+
+// Dark Styles
+.dark-title {
+    color: $grey-lighter !important;
+}
+
+.dark-subtitle {
+    color: $grey-lighter !important;
+}
+
+.dark-with-center {
+    background: $black-ter !important;
+}
+
+.dark-background {
+    background-color: $black-ter;
+}

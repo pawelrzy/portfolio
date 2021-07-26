@@ -7,14 +7,14 @@ import ResumePath from '../../assets/resume.pdf';
 import withAnimation from '../../HOCs/withAnimation/withAnimation';
 import { SocialIcons } from '../../components/SocialIcons';
 import { ThemeButton } from '../../components/ThemeButton';
-import { ScrolledContext } from '../App';
+import { ThemeContext } from '../App';
 
 interface SplashProps {
     onThemeChange: (isDarkTheme: boolean) => void;
 }
 
 const Splash = ({ onThemeChange }: SplashProps) => {
-    const hasScrolled = React.useContext(ScrolledContext);
+    // const hasScrolled = React.useContext(ScrolledContext);
     return <section className="container splash">
         <div className="splash-content">
             <SplashText />
@@ -27,21 +27,22 @@ const Splash = ({ onThemeChange }: SplashProps) => {
         >
             <i className="fas fa-chevron-down"></i>
         </Link>
-        {!hasScrolled && <div className="theme-button">
+        <div className="theme-button">
             <ThemeButton onChange={onThemeChange} />
-        </div>}
+        </div>
     </section>
 }
 
-const SplashText = () => (
-    <div>
-        <h1 className="title is-1">
+const SplashText = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
+    return <div>
+        <h1 className={`is-1 title ${isDarkTheme && 'dark-title'}`}>
             Hey, I'm Michael.{' '}
             <span role="img" aria-label="wave">
                 👋🏽
             </span>
         </h1>
-        <h2 className="subtitle">
+        <h2 className={`subtitle ${isDarkTheme && 'dark-subtitle'}`}>
             I like to build beautiful and smart things for wonderful people.
             <br />
             I’m currently looking for new-grad opportunities for the Summer 2022 season.
@@ -51,7 +52,7 @@ const SplashText = () => (
                 href={ResumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button is-info"
+                className={`button is-info ${isDarkTheme ? 'is-light' : ''}`}
             >
                 Check out my resume here
             </a>
@@ -59,6 +60,6 @@ const SplashText = () => (
             <SocialIcons />
         </div>
     </div>
-);
+};
 
 export default withAnimation<SplashProps>(Splash);

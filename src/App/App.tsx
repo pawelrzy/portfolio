@@ -35,38 +35,40 @@ export const App = () => {
     return (
         <ThemeContext.Provider value={isDarkTheme}>
             <ScrolledContext.Provider value={hasScrolled}>
-                <NavBar />
-                <Element id="splash" name="splash">
-                    <Splash onThemeChange={(isDarkTheme) => setIsDarkTheme(isDarkTheme)} />
-                </Element>
-                <Element id="about-me" name="about-me" className="body-section">
-                    <AboutMe />
-                </Element>
-                <Element
-                    id="knowledge"
-                    name="knowledge"
-                    className="body-section"
-                >
-                    <Knowledge />
-                </Element>
-                <Element
-                    id="experience"
-                    name="experience"
-                    className="body-section"
-                >
-                    <Experiences />
-                </Element>
-                <Element id="projects" name="projects" className="body-section">
-                    <Projects />
-                </Element>
-                <Element
-                    id="contact-me"
-                    name="contact-me"
-                    className="body-section"
-                >
-                    <ContactMe />
-                </Element>
-                <Footer />
+                <div className={`${isDarkTheme && 'dark-background'}`}>
+                    <NavBar />
+                    <Element id="splash" name="splash">
+                        <Splash onThemeChange={(isDarkTheme) => setIsDarkTheme(isDarkTheme)} />
+                    </Element>
+                    <Element id="about-me" name="about-me" className="body-section">
+                        <AboutMe />
+                    </Element>
+                    <Element
+                        id="knowledge"
+                        name="knowledge"
+                        className="body-section"
+                    >
+                        <Knowledge />
+                    </Element>
+                    <Element
+                        id="experience"
+                        name="experience"
+                        className="body-section"
+                    >
+                        <Experiences />
+                    </Element>
+                    <Element id="projects" name="projects" className="body-section">
+                        <Projects />
+                    </Element>
+                    <Element
+                        id="contact-me"
+                        name="contact-me"
+                        className="body-section"
+                    >
+                        <ContactMe />
+                    </Element>
+                    <Footer />
+                </div>
             </ScrolledContext.Provider>
         </ThemeContext.Provider>
     );

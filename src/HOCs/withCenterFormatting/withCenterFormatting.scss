@@ -1,11 +1,6 @@
 @import '../../styles/breakpoints.scss';
+@import '../../styles/styles.scss';
 
-.with-title {
-    // padding-top: 7rem !important;
+.with-center {
     background: white;
-    // @include desktop-up {
-    //     min-height: 100vh;
-    //     padding-top: 10rem !important;
-    //     padding-bottom: 10rem !important;
-    // }
 }
