@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeContext } from '../../App';
 import './ProjectCard.scss';
 
 interface ProjectCardProps {
@@ -11,13 +12,14 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
+    const isDarkTheme = React.useContext(ThemeContext);
     let descriptionRef = React.useRef<HTMLDivElement>(null);
     React.useEffect(() => {
         descriptionRef.current!.innerHTML = project.body;
     });
 
     return (
-        <article className="message job-card">
+        <article className={`message job-card ${isDarkTheme && 'dark-layer-1'}`}>
             <div
                 className="message-header cover-photo"
                 style={{
@@ -28,7 +30,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 <div className="title-row">
                     <div className="project-name">
                         <div>
-                            <h1 className="is-size-6">
+                            <h1 className={`is-size-6 ${isDarkTheme && 'dark-text'}`}>
                                 <b>{project.name}</b>
                             </h1>
                         </div>
@@ -37,7 +39,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                         </p>
                     </div>
                 </div>
-                <div ref={descriptionRef} />
+                <div ref={descriptionRef} className={`is-size-6 ${isDarkTheme && 'dark-text'}`} />
             </div>
         </article>
     );
