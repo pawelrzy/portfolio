@@ -33,10 +33,19 @@ export const NavBar = () => {
         }
     };
 
+    const getNavStyle = React.useCallback(() => {
+        let style = 'navbar is-fixed-top animated fadeIn'
+        if (isDarkTheme) {
+            style = style.concat(!hasScrolled ? ' dark-background' : ' dark-layer-1');
+        } else if (hasScrolled) {
+            style = style.concat(' drop-shadow');
+        }
+        return style;
+    }, [hasScrolled, isDarkTheme])
+
     return (
         <nav
-            className={`navbar is-fixed-top animated fadeIn ${isDarkTheme ? 'dark-layer-1' : hasScrolled &&
-                'drop-shadow'}`}
+            className={getNavStyle()}
             role="navigation"
             aria-label="main navigation"
         >
