@@ -1,10 +1,8 @@
-import React, { Component, createRef } from 'react';
+import React, { Component, ComponentType, createRef } from 'react';
 import './withAnimation.scss';
 
-type ComponentType = React.ComponentClass | React.StatelessComponent;
-
-const withAnimation = (WrappedComponent: ComponentType) => {
-    return class Animated extends Component {
+const withAnimation = <P extends {}>(WrappedComponent: ComponentType<P>) => {
+    return class Animated extends Component<P> {
         node = createRef();
         state = {
             element: document.getElementById('about-me'),
@@ -37,14 +35,12 @@ const withAnimation = (WrappedComponent: ComponentType) => {
 
         render() {
             const { isVisible } = this.state;
-            return (
-                <div
-                    className="animated-container"
-                    ref={(n: any) => (this.node = n)}
-                >
-                    {isVisible && <WrappedComponent />}
-                </div>
-            );
+            return <div
+                className="animated-container"
+                ref={(n: any) => (this.node = n)}
+            >
+                {isVisible && <WrappedComponent {...this.props} />}
+            </div>
         }
     };
 };

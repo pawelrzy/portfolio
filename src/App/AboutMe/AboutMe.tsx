@@ -1,7 +1,9 @@
 import React from 'react';
+import { ThemeContext } from '../App';
 import './AboutMe.scss';
 
 export const AboutMe = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
     const [update, causeUpdate] = React.useState(false);
 
     const handleResize = () => causeUpdate(!update);
@@ -18,7 +20,7 @@ export const AboutMe = () => {
                 <div className="selfie" />
             </div>
 
-            <div className="about-me-text">
+            <div className={`about-me-text ${isDarkTheme && 'dark-text'}`}>
                 <p>
                     I'm a <mark>Software Engineering Intern @ <a href="https://www.snowflake.com/">Snowflake</a></mark>
                 </p>
@@ -41,7 +43,7 @@ export const AboutMe = () => {
                     <img
                         src={require(`../../assets/signature.png`)}
                         alt="signature"
-                        className="signature"
+                        className={`signature ${isDarkTheme && 'dark-signature'}`}
                     />
                 </div>
             </div>

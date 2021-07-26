@@ -21,3 +21,39 @@ $message-body-border-width: 0;
 @import '../../node_modules/bulma/sass/components/navbar.sass';
 @import '../../node_modules/bulma/sass/layout/_all.sass';
 @import '../../node_modules/bulma-divider/dist/css/bulma-divider.sass';
+
+// Dark Styles
+.dark-title {
+    color: $grey-lighter !important;
+    transition: color 0.4s ease-in-out;
+}
+
+.dark-subtitle {
+    color: $grey-lighter !important;
+    transition: color 0.4s ease-in-out;
+}
+
+.dark-text {
+    color: $grey-lighter !important;
+    transition: color 0.4s ease-in-out;
+}
+
+.dark-with-center {
+    background: $black-ter !important;
+    transition: background 0.4s ease-in-out;
+}
+
+.dark-layer-1 {
+    background-color: $black-bis;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.dark-background {
+    background-color: $black-ter;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.dark-signature {
+    filter: invert(100%);
+    transition: filter 0.4s ease-in-out;
+}

@@ -3,8 +3,10 @@ import React from 'react';
 import './Projects.scss';
 
 import { ProjectCard } from './ProjectCard/ProjectCard';
+import { ThemeContext } from '../App';
 
 export const Projects = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
     const projects = [
         {
             name: 'projectRollout',
@@ -57,7 +59,7 @@ export const Projects = () => {
 
     return (
         <div className="container">
-            <h1 className="title has-text-centered is-3">Projects</h1>
+            <h1 className={`title has-text-centered is-3 ${isDarkTheme && 'dark-title'}`}>Projects</h1>
             <div className="projects">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project} />

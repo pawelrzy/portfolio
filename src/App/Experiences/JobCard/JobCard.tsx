@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeContext } from '../../App';
 import './JobCard.scss';
 
 interface JobCardProps {
@@ -14,13 +15,14 @@ interface JobCardProps {
 }
 
 const JobCard = ({ job }: JobCardProps) => {
+    const isDarkTheme = React.useContext(ThemeContext);
     let descriptionRef = React.useRef<HTMLDivElement>(null);
     React.useEffect(() => {
         descriptionRef.current!.innerHTML = job.body;
     });
 
     return (
-        <article className="message job-card">
+        <article className={`message job-card ${isDarkTheme && 'dark-layer-1'}`}>
             {job.hasOwnProperty('coverPhoto') && (
                 <div
                     className="message-header cover-photo"
@@ -38,7 +40,7 @@ const JobCard = ({ job }: JobCardProps) => {
                     />
                     <div className="company-name">
                         <div>
-                            <h1 className="is-size-6">
+                            <h1 className={`is-size-6 ${isDarkTheme && 'dark-text'}`}>
                                 <b>{job.company} /</b>&nbsp;{job.position}
                             </h1>
                         </div>
@@ -47,7 +49,7 @@ const JobCard = ({ job }: JobCardProps) => {
                         </p>
                     </div>
                 </div>
-                <div ref={descriptionRef} />
+                <div ref={descriptionRef} className={`is-size-6 ${isDarkTheme && 'dark-text'}`} />
             </div>
         </article>
     );

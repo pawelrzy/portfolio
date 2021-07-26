@@ -1,10 +1,12 @@
 import React from 'react';
 
 import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
+import { ThemeContext } from '../App';
 
 import './Knowledge.scss';
 
 const Knowledge = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
     const skills = [
         {
             title: 'Languages',
@@ -75,7 +77,7 @@ const Knowledge = () => {
             <article>
                 {skills.map((skill) => (
                     <div className="category">
-                        <h1 className="title is-size-4">{skill.title}</h1>
+                        <h1 className={`title is-size-4 ${isDarkTheme && 'dark-title'}`}>{skill.title}</h1>
                         <Tags tags={skill.tags} />
                     </div>
                 ))}

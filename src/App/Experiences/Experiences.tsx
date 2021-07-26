@@ -1,9 +1,11 @@
 import React from 'react';
+import { ThemeContext } from '../App';
 import './Experiences.scss';
 
 import JobCard from './JobCard/JobCard';
 
 export const Experiences = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
     const jobs = [
         {
             logo: 'snowflake.png',
@@ -141,7 +143,7 @@ export const Experiences = () => {
 
     return (
         <div className="container">
-            <h1 className="title has-text-centered is-3">Experiences</h1>
+            <h1 className={`title has-text-centered is-3 ${isDarkTheme && 'dark-title'}`}>Experiences</h1>
             <div className="experiences">
                 {jobs.map((job, index) => (
                     <JobCard key={index} job={job} />

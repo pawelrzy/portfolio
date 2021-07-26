@@ -4,12 +4,15 @@ import { Link } from 'react-scroll';
 import NavItems from './NavItems/NavItems';
 
 import './NavBar.scss';
+import { ScrolledContext, ThemeContext } from '../App';
 
 interface NavBarProps {
-    hasScrolled: boolean;
+    onThemeChange: (isDarkTheme: boolean) => void;
 }
 
-export const NavBar = ({ hasScrolled }: NavBarProps) => {
+export const NavBar = ({ onThemeChange }: NavBarProps) => {
+    const hasScrolled = React.useContext(ScrolledContext);
+    const isDarkTheme = React.useContext(ThemeContext);
     const [menuToggled, setMenuToggled] = React.useState(false);
     const [update, causeUpdate] = React.useState(false);
 
@@ -34,10 +37,19 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
         }
     };
 
+    const getNavStyle = React.useCallback(() => {
+        let style = 'navbar is-fixed-top animated fadeIn'
+        if (isDarkTheme) {
+            style = style.concat(!hasScrolled ? ' dark-background' : ' dark-layer-1');
+        } else if (hasScrolled) {
+            style = style.concat(' drop-shadow');
+        }
+        return style;
+    }, [hasScrolled, isDarkTheme])
+
     return (
         <nav
-            className={`navbar is-fixed-top animated fadeIn ${hasScrolled &&
-                'drop-shadow'}`}
+            className={getNavStyle()}
             role="navigation"
             aria-label="main navigation"
         >
@@ -69,7 +81,7 @@ export const NavBar = ({ hasScrolled }: NavBarProps) => {
                     )}
                 </div>
                 <div id="nav-items" className="navbar-menu" onClick={toggleNav}>
-                    <NavItems />
+                    <NavItems onThemeChange={onThemeChange} />
                 </div>
             </div>
         </nav>
@@ -87,11 +99,14 @@ const Logo = ({ hasScrolled }: { hasScrolled: boolean }) => {
     );
 }
 
-const Name = () => (
-    <div>
-        <div className="name-text">Michael Vytlingam</div>
-        <div className="position-text">
-            Full Stack Developer
+const Name = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
+    return (
+        <div>
+            <div className={`name-text ${isDarkTheme && 'dark-text'}`}>Michael Vytlingam</div>
+            <div className={`position-text ${isDarkTheme && 'dark-text'}`}>
+                Full Stack Developer
+            </div>
         </div>
-    </div>
-);
+    );
+};
