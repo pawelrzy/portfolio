@@ -18,10 +18,10 @@ const ContactMe = () => {
                         action={'https://formspree.io/meqjzody'}
                     >
                         <div className="field">
-                            <label className="label">Name</label>
+                            <label className={`label ${isDarkTheme && 'dark-text'}`}>Name</label>
                             <div className="control">
                                 <input
-                                    className="input"
+                                    className={`input ${isDarkTheme && 'has-background-dark has-text-primary-light'}`}
                                     type="text"
                                     name="Name"
                                     placeholder="Your name..." />
@@ -29,10 +29,10 @@ const ContactMe = () => {
                         </div>
 
                         <div className="field">
-                            <label className="label">Email</label>
+                            <label className={`label ${isDarkTheme && 'dark-text'}`}>Email</label>
                             <div className="control">
                                 <input
-                                    className="input"
+                                    className={`input ${isDarkTheme && 'has-background-dark has-text-primary-light'}`}
                                     type="email"
                                     name="_replyto"
                                     placeholder="Your email..." />
@@ -40,11 +40,11 @@ const ContactMe = () => {
                         </div>
 
                         <div className="field">
-                            <label className="label">Message</label>
+                            <label className={`label ${isDarkTheme && 'dark-text'}`}>Message</label>
                             <div className="control">
                                 <textarea
                                     name="message"
-                                    className="textarea"
+                                    className={`textarea ${isDarkTheme && 'has-background-dark has-text-primary-light'}`}
                                     placeholder="Type your message"
                                 ></textarea>
                             </div>
