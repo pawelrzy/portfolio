@@ -31,8 +31,16 @@ $message-body-border-width: 0;
     color: $grey-lighter !important;
 }
 
+.dark-text {
+    color: $grey-lighter !important;
+}
+
 .dark-with-center {
     background: $black-ter !important;
+}
+
+.dark-layer-1 {
+    background-color: $black-bis;
 }
 
 .dark-background {

@@ -4,10 +4,11 @@ import { Link } from 'react-scroll';
 import NavItems from './NavItems/NavItems';
 
 import './NavBar.scss';
-import { ScrolledContext } from '../App';
+import { ScrolledContext, ThemeContext } from '../App';
 
 export const NavBar = () => {
     const hasScrolled = React.useContext(ScrolledContext);
+    const isDarkTheme = React.useContext(ThemeContext);
     const [menuToggled, setMenuToggled] = React.useState(false);
     const [update, causeUpdate] = React.useState(false);
 
@@ -34,7 +35,7 @@ export const NavBar = () => {
 
     return (
         <nav
-            className={`navbar is-fixed-top animated fadeIn ${hasScrolled &&
+            className={`navbar is-fixed-top animated fadeIn ${isDarkTheme ? 'dark-layer-1' : hasScrolled &&
                 'drop-shadow'}`}
             role="navigation"
             aria-label="main navigation"
@@ -85,11 +86,14 @@ const Logo = ({ hasScrolled }: { hasScrolled: boolean }) => {
     );
 }
 
-const Name = () => (
-    <div>
-        <div className="name-text">Michael Vytlingam</div>
-        <div className="position-text">
-            Full Stack Developer
+const Name = () => {
+    const isDarkTheme = React.useContext(ThemeContext);
+    return (
+        <div>
+            <div className={`name-text ${isDarkTheme && 'dark-text'}`}>Michael Vytlingam</div>
+            <div className={`position-text ${isDarkTheme && 'dark-text'}`}>
+                Full Stack Developer
+            </div>
         </div>
-    </div>
-);
+    );
+};
