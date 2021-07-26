@@ -36,9 +36,9 @@ export const App = () => {
         <ThemeContext.Provider value={isDarkTheme}>
             <ScrolledContext.Provider value={hasScrolled}>
                 <div className={`${isDarkTheme && 'dark-background'}`}>
-                    <NavBar />
+                    <NavBar onThemeChange={(isDarkTheme) => setIsDarkTheme(isDarkTheme)} />
                     <Element id="splash" name="splash">
-                        <Splash onThemeChange={(isDarkTheme) => setIsDarkTheme(isDarkTheme)} />
+                        <Splash />
                     </Element>
                     <Element id="about-me" name="about-me" className="body-section">
                         <AboutMe />

@@ -6,7 +6,11 @@ import NavItems from './NavItems/NavItems';
 import './NavBar.scss';
 import { ScrolledContext, ThemeContext } from '../App';
 
-export const NavBar = () => {
+interface NavBarProps {
+    onThemeChange: (isDarkTheme: boolean) => void;
+}
+
+export const NavBar = ({ onThemeChange }: NavBarProps) => {
     const hasScrolled = React.useContext(ScrolledContext);
     const isDarkTheme = React.useContext(ThemeContext);
     const [menuToggled, setMenuToggled] = React.useState(false);
@@ -77,7 +81,7 @@ export const NavBar = () => {
                     )}
                 </div>
                 <div id="nav-items" className="navbar-menu" onClick={toggleNav}>
-                    <NavItems />
+                    <NavItems onThemeChange={onThemeChange} />
                 </div>
             </div>
         </nav>

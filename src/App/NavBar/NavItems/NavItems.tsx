@@ -1,12 +1,17 @@
-import React, { FC } from 'react';
+import React from 'react';
 import Scroll from 'react-scroll';
+import { ThemeButton } from '../../../components/ThemeButton';
 import { ThemeContext } from '../../App';
 
 import './NavItems.scss';
 
 const ScrollLink = Scroll.Link;
 
-const NavItems: FC = () => {
+interface NavItemsProps {
+    onThemeChange: (isDarkTheme: boolean) => void;
+}
+
+const NavItems = ({ onThemeChange }: NavItemsProps) => {
     const isDarkTheme = React.useContext(ThemeContext);
     return (
         <div className="navbar-end nav-items">
@@ -32,6 +37,10 @@ const NavItems: FC = () => {
                     👋🏽
                 </span>
             </ScrollLink>
+            <div className={`navbar-item`}>
+                <ThemeButton onChange={onThemeChange} />
+            </div>
+
         </div>
     );
 };
