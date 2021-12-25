@@ -15,18 +15,18 @@ const NavItems = ({ onThemeChange }: NavItemsProps) => {
     const isDarkTheme = React.useContext(ThemeContext);
     return (
         <div className="navbar-end nav-items">
-            <ScrollLink to="about-me" smooth className={`navbar-item ${isDarkTheme && 'dark-text'}`}>
+            <ScrollLink to="about-me" smooth className={`navbar-item ${isDarkTheme && 'dark-navbar-item'}`}>
                 About Me
             </ScrollLink>
-            <ScrollLink to="knowledge" smooth className={`navbar-item ${isDarkTheme && 'dark-text'}`}>
+            <ScrollLink to="knowledge" smooth className={`navbar-item ${isDarkTheme && 'dark-navbar-item'}`}>
                 Knowledge
             </ScrollLink>
-            <ScrollLink to="experience" smooth className={`navbar-item ${isDarkTheme && 'dark-text'}`}>
-                Experience
+            <ScrollLink to="experience" smooth className={`navbar-item ${isDarkTheme && 'dark-navbar-item'}`}>
+                Experiences
             </ScrollLink>
-            <ScrollLink to="projects" smooth className={`navbar-item ${isDarkTheme && 'dark-text'}`}>
+            {/* <ScrollLink to="projects" smooth className={`navbar-item ${isDarkTheme && 'dark-navbar-item'}`}>
                 Projects
-            </ScrollLink>
+            </ScrollLink> */}
             <ScrollLink
                 to="contact-me"
                 smooth

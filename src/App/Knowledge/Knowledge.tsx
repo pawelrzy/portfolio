@@ -1,6 +1,5 @@
 import React from 'react';
 
-import withCenterFormatting from '../../HOCs/withCenterFormatting/withCenterFormatting';
 import { ThemeContext } from '../App';
 
 import './Knowledge.scss';
@@ -11,14 +10,16 @@ const Knowledge = () => {
         {
             title: 'Languages',
             tags: [
-                'Python',
-                'Go',
                 'TypeScript',
                 'JavaScript',
-                'C++',
-                'SQL',
+                'Python',
+                'Go',
+                'Dart',
+                'C/C++',
                 'MATLAB',
-                'HTML5',
+                'Bash',
+                'SQL',
+                'HTML',
                 'Sass',
             ],
         },
@@ -29,8 +30,10 @@ const Knowledge = () => {
                 'Redux',
                 'Vue',
                 'Electron',
+                'Flutter',
                 'JEST',
                 'Enzyme',
+                'React Testing Library',
                 'Webpack',
                 'Babel',
                 'Bulma',
@@ -49,13 +52,11 @@ const Knowledge = () => {
             tags: [
                 'Express',
                 'Flask',
-                '.NET Core',
-                'AWS S3',
+                'Django',
                 'Firebase',
                 'Docker',
-                'Azure DevOps (Pipelines)',
-                'CircleCI',
-                'AWS EC2',
+                'Jenkins',
+                'AWS',
             ],
         },
         {
@@ -63,25 +64,31 @@ const Knowledge = () => {
             tags: [
                 'PostgreSQL',
                 'MongoDB',
+                'Snowflake',
                 'TensorFlow',
                 'Keras',
                 'YOLO',
                 'Elasticsearch',
-                'Microsoft Cognitive Services (LUIS)',
+                'Numpy',
+                'Pandas',
+                'Matplotlib',
             ],
         },
     ];
 
     return (
-        <div className="knowledge">
-            <article>
-                {skills.map((skill) => (
-                    <div className="category">
-                        <h1 className={`title is-size-4 ${isDarkTheme && 'dark-title'}`}>{skill.title}</h1>
-                        <Tags tags={skill.tags} />
-                    </div>
-                ))}
-            </article>
+        <div className={`container is-half is-offset-one-quarter knowledge-container ${isDarkTheme ? 'dark-with-center' : 'with-center'}`}>
+            <h1 className={`title has-text-centered is-3 ${isDarkTheme && 'dark-title'}`}>Knowledge</h1>
+            <div className="knowledge">
+                <article>
+                    {skills.map((skill) => (
+                        <div className="category" key={skill.title}>
+                            <h1 className={`title is-size-4 ${isDarkTheme && 'dark-title'}`}>{skill.title}</h1>
+                            <Tags tags={skill.tags} />
+                        </div>
+                    ))}
+                </article>
+            </div>
         </div>
     );
 };
@@ -100,4 +107,4 @@ const Tags = ({ tags }: TagsProps) => (
     </div>
 );
 
-export default withCenterFormatting('Knowledge', Knowledge);
+export default Knowledge;

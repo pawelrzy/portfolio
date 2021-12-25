@@ -27,18 +27,12 @@ export const NavBar = ({ onThemeChange }: NavBarProps) => {
 
     const toggleNav = () => {
         var nav = document.getElementById('nav-items') as HTMLElement;
-        var className = nav.getAttribute('class');
-        if (className === 'navbar-menu') {
-            nav.className = 'navbar-menu is-active';
-            setMenuToggled(true);
-        } else {
-            nav.className = 'navbar-menu';
-            setMenuToggled(false);
-        }
+        var className = nav.getAttribute('class') || "";
+        setMenuToggled(isMobile && !className.includes('is-active'));
     };
 
     const getNavStyle = React.useCallback(() => {
-        let style = 'navbar is-fixed-top animated fadeIn'
+        let style = 'navbar is-fixed-top'
         if (isDarkTheme) {
             style = style.concat(!hasScrolled ? ' dark-background' : ' dark-layer-1');
         } else if (hasScrolled) {
@@ -80,7 +74,7 @@ export const NavBar = ({ onThemeChange }: NavBarProps) => {
                         </button>
                     )}
                 </div>
-                <div id="nav-items" className="navbar-menu" onClick={toggleNav}>
+                <div id="nav-items" className={`navbar-menu ${menuToggled && isDarkTheme && 'dark-layer-1'} ${menuToggled && 'is-active'}`} onClick={toggleNav}>
                     <NavItems onThemeChange={onThemeChange} />
                 </div>
             </div>

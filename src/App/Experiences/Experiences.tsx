@@ -6,12 +6,21 @@ import JobCard from './JobCard/JobCard';
 
 export const Experiences = () => {
     const isDarkTheme = React.useContext(ThemeContext);
+    const [update, causeUpdate] = React.useState(false);
+
+    const handleResize = () => causeUpdate(!update);
+
+    React.useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    });
+
     const jobs = [
         {
             logo: 'snowflake.png',
             company: 'Snowflake',
             position: 'Software Engineering Intern',
-            date: 'May 2021 - Present',
+            date: 'May 2021 - August 2021',
             location: 'San Mateo, CA (Remote)',
             body: `
                 Building out captivating customer experiences on the Snowflake Data Marketplace product.
@@ -56,7 +65,7 @@ export const Experiences = () => {
             logo: 'uw.jpg',
             company: 'University of Waterloo',
             position: 'Machine Learning Researcher',
-            date: 'Sept 2019 - Dec 2019',
+            date: 'September 2019 - December 2019',
             location: 'Waterloo, ON',
             body: `
                 I took part in training real-time object detection model of 
@@ -73,7 +82,7 @@ export const Experiences = () => {
             coverPhoto: 'gd-cover.jpg',
             company: 'Grain Discovery',
             position: 'Software Engineering Intern',
-            date: 'May 2019 - Aug 2019',
+            date: 'May 2019 - August 2019',
             location: 'Toronto, ON',
             body: `
                 I worked on Grain Discovery's agricultural trading marketplace. 
@@ -97,7 +106,7 @@ export const Experiences = () => {
             coverPhoto: 'engineering-cover.jpg',
             company: 'ENGINEERING.com',
             position: 'Software Engineering Intern',
-            date: 'Sept 2018 - Dec 2018',
+            date: 'September 2018 - December 2018',
             location: 'Toronto, ON',
             body: `
                 I was working on ENGINEERING.com's online collaboration platform, ProjectBoard. 
@@ -113,7 +122,7 @@ export const Experiences = () => {
             logo: 'snyder.jpg',
             company: 'Snyder Construction',
             position: 'Assistant Project Manager',
-            date: 'Jan 2018 - Apr 2018',
+            date: 'January 2018 - April 2018',
             location: 'Whitby, ON',
             body: `
                 I was involved in all aspects of Snyder's construction
@@ -131,7 +140,7 @@ export const Experiences = () => {
             coverPhoto: 'kendo.jpg',
             company: 'MVGD',
             position: 'Freelance Graphic Designer',
-            date: 'Dec 2015 - Sept 2018', // TODO: Add links to websites
+            date: 'Dec 2015 - Sept 2018',
             location: 'Remote',
             body: `
                 I created logos, banners, documents, and websites for 
@@ -141,14 +150,37 @@ export const Experiences = () => {
         },
     ];
 
+    const isMobile = window.innerWidth < 1024;
+
+    const columns: any[][] = [[], []];
+    if (isMobile) {
+        columns[0] = jobs;
+    } else {
+        for (let i = 0; i < jobs.length; i += 2) {
+            columns[0].push(jobs[i]);
+            columns[1].push(jobs[i + 1]);
+        }
+    }
+
     return (
         <div className="container">
             <h1 className={`title has-text-centered is-3 ${isDarkTheme && 'dark-title'}`}>Experiences</h1>
-            <div className="experiences">
-                {jobs.map((job, index) => (
-                    <JobCard key={index} job={job} />
-                ))}
-            </div>
+
+            {isMobile ? columns[0].map((job, index) => (
+                <div className="experiences" key={index}>
+                    <JobCard job={job} />
+                </div>
+            )) : (
+                <div className="two-column">
+                    {columns.map((column, cIndex) =>
+                        <div className="experiences" key={cIndex} >
+                            {column.map((job, index) => (
+                                <JobCard key={index} job={job} />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 };

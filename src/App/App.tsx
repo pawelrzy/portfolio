@@ -8,16 +8,19 @@ import Knowledge from './Knowledge/Knowledge';
 import ContactMe from './ContactMe/ContactMe';
 import { NavBar } from './NavBar/NavBar';
 import { AboutMe } from './AboutMe/AboutMe';
-import { Projects } from './Projects/Projects';
 import { Experiences } from './Experiences/Experiences';
 import { Footer } from './Footer/Footer';
 
 export const ThemeContext = React.createContext(false);
 export const ScrolledContext = React.createContext(false);
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 export const App = () => {
     const [hasScrolled, setHasScrolled] = React.useState(false);
-    const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+    const [isDarkTheme, setIsDarkTheme] = React.useState(prefersDarkScheme);
+
+    // Set overscroll color
+    document.getElementsByTagName('html')[0].style.backgroundColor = isDarkTheme ? '#242424' : '#FFF';
 
     const handleScroll = React.useCallback(() => {
         if (window.scrollY > 0 && !hasScrolled) {
@@ -57,9 +60,9 @@ export const App = () => {
                     >
                         <Experiences />
                     </Element>
-                    <Element id="projects" name="projects" className="body-section">
+                    {/* <Element id="projects" name="projects" className="body-section">
                         <Projects />
-                    </Element>
+                    </Element> */}
                     <Element
                         id="contact-me"
                         name="contact-me"
