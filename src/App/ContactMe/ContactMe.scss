@@ -1,3 +1,18 @@
+@import '../../styles/breakpoints.scss';
+
+.contact-container {
+    padding: 2rem !important;
+    margin-left: 16rem;
+    margin-right: 16rem;
+    @include tablet-down {
+        margin: 2rem !important;
+    }
+}
+
+.with-center {
+    background: white;
+}
+
 .send-button {
     justify-content: center !important;
 }
