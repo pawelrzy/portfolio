@@ -12,7 +12,6 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.096);
     background-color: hsl(0, 0%, 98%);
     transition: box-shadow 0.1s ease-in-out;
-    transition: background-color 1s ease-in-out;
 }
 
 .navbar-burger {
@@ -27,7 +26,7 @@
 
 .logo-container {
     display: flex;
-    align-items: center;
+    align-items: center !important;
 }
 
 .logo-with-text {

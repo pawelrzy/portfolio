@@ -9,7 +9,7 @@
 .job-card {
     margin: 2rem 2rem;
     @include desktop-up {
-        width: 45%;
+        max-width: 50vw;
     }
 }
 

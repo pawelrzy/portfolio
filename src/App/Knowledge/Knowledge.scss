@@ -35,8 +35,9 @@
 
 .skill {
     transition: 0.2s !important;
+    cursor: default;
 }
 
 .skill:hover {
-    background-color: #cde9ff !important; 
+    background-color: #cde9ff !important;
 }
