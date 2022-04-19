@@ -40,9 +40,9 @@
     margin: 2rem;
 
     background-image: url('../../assets/aboutme-selfie.jpg');
-    background-position: 10% 0%;
+    background-position: 0% 10%;
     background-size: cover;
-    // filter: brightness(90%);
+    transform: scaleX(-1);
 
     border-radius: 1rem;
 }

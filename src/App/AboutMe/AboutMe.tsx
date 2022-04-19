@@ -31,7 +31,7 @@ export const AboutMe = () => {
                 </p>
                 <br />
                 <p>
-                    I'm a lover of cars, planes, cricket, and basketball. I
+                    I enjoy cars, cricket, volleyball, tennis and basketball. I
                     enjoy lifting weights, playing Werewolf with friends,
                     experimenting with new ideas and learning as much as I can
                     along the way.
