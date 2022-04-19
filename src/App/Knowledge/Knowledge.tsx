@@ -15,6 +15,7 @@ const Knowledge = () => {
                 'Python',
                 'Go',
                 'Dart',
+                'Rust',
                 'C/C++',
                 'MATLAB',
                 'Bash',
