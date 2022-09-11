@@ -36,7 +36,7 @@ const SplashText = () => {
         <h2 className={`subtitle ${isDarkTheme && 'dark-subtitle'}`}>
             I like to build beautiful and smart things working with wonderful people.
             <br/>
-            I’m an incoming Software Engineer at <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://www.snowflake.com/">Snowflake</a>.
+            I’m a Software Engineer at <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://www.snowflake.com/">Snowflake</a> working on the <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://www.snowflake.com/en/data-cloud/marketplace/">Marketplace</a>.
         </h2>
         <div className="button-row">
             <a

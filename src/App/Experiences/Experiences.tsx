@@ -19,14 +19,24 @@ export const Experiences = () => {
         {
             logo: 'snowflake.png',
             company: 'Snowflake',
+            position: 'Software Engineer',
+            date: 'September 2022 - Present',
+            location: 'San Mateo, CA',
+            body: `
+                <b>Tech:</b> TypeScript, React, Express, JEST
+            `,
+        },
+        {
+            logo: 'snowflake.png',
+            company: 'Snowflake',
             position: 'Software Engineering Intern',
             date: 'May 2021 - August 2021',
             location: 'San Mateo, CA (Remote)',
             body: `
-                Building out captivating customer experiences on the Snowflake Data Marketplace product.
+                Built out captivating customer experiences on the Snowflake Data Marketplace product.
                 <br/>
                 <br/>
-                <b>Tech:</b> TypeScript, React (with hooks), Express, JEST
+                <b>Tech:</b> TypeScript, React, Express, JEST
             `,
         },
         {
@@ -156,11 +166,13 @@ export const Experiences = () => {
     if (isMobile) {
         columns[0] = jobs;
     } else {
-        for (let i = 0; i < jobs.length; i += 2) {
+        for (let i = 0; i < jobs.length - 1; i += 2) {
             columns[0].push(jobs[i]);
             columns[1].push(jobs[i + 1]);
         }
     }
+
+    console.log(columns);
 
     return (
         <div className="container">

@@ -22,11 +22,11 @@ export const AboutMe = () => {
 
             <div className={`about-me-text ${isDarkTheme && 'dark-text'}`}>
                 <p>
-                    I'm an incoming Software Engineer at <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://www.snowflake.com/">Snowflake</a>.
+                    I'm a Software Engineer at <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://www.snowflake.com/">Snowflake</a>.
                 </p>
                 <br />
                 <p>
-                    I'm a 4th year Mechanical Engineering student at the {' '}
+                    I studied Mechanical Engineering at the {' '}
                         <a className={`${isDarkTheme ? 'dark-underline' : 'underline'}`} href="https://uwaterloo.ca/">University of Waterloo</a>.
                 </p>
                 <br />
