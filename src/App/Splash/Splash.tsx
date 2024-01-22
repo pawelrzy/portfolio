@@ -28,7 +28,7 @@ const SplashText = () => {
     const isDarkTheme = React.useContext(ThemeContext);
     return <div>
         <h1 className={`is-1 title ${isDarkTheme && 'dark-title'}`}>
-            Hey, I'm Michael.{' '}
+            Hey, I'm Pawel.{' '}
             <span role="img" aria-label="wave">
                 👋🏽
             </span>
